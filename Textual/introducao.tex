@@ -1,72 +1,4 @@
-%==============================================================
-%------------------------INTRODUÇÃO----------------------------
-%--------------main.tex, v1.0.0, JonathanTSilva----------------
-%==============================================================
-
 \chapter{Introdução}\label{cap:introducao}
-
-%==============================================================
-%-------------Templates de inserção de imagens-----------------
-%==============================================================
-
-%Imagem com Fonte com nota no rodapé (Disponível em: ... Acesso em:)
-\begin{comment}
-    \begin{figure}[H]
-        \caption{\label{fig:AQUI VAI O ATALHO DA FIGURA}[AQUI VAI O CAPTION DA FIGURA]}
-        \begin{center}
-            \includegraphics[width=[AQUI VAI A PROPORÇAO DA FIGURA]\textwidth]{[AQUI VAI O DIRETÓRIO DA FIGURA]}
-        \end{center}
-        \legend{Fonte: [AQUI VAI A FONTE DA FIGURA].\protect\footnotemark}
-    \end{figure}
-    
-    \footnotetext{Disponível em: \url{AQUI VAI O URL DA FIGURA}. Acesso em: [AQUI VAI A DATA DE ACESSO - SEMPRE COM O MES ABREVIADO: 26 jun. 2021].}
-\end{comment}
-
-%Imagem sem fonte com rodapé
-\begin{comment}
-    \begin{figure}[H]
-        \caption{\label{fig:AQUI VAI O ATALHO DA FIGURA}[AQUI VAI O CAPTION DA FIGURA]}
-        \begin{center}
-            \includegraphics[width=[AQUI VAI A PROPORÇAO DA FIGURA]\textwidth]{[AQUI VAI O DIRETÓRIO DA FIGURA]}
-        \end{center}
-        \legend{Fonte: [AQUI VAI A FONTE DA FIGURA].}
-    \end{figure}
-\end{comment}
-
-%Imagem com fonte igual de livro
-\begin{comment}
-    \begin{figure}[H]
-        \caption{\label{fig:[AQUI VAI O ATALHO DA FIGURA]}[AQUI VAI O CAPTION DA FIGURA]}
-        \begin{center}
-            \includegraphics[width=[AQUI VAI A PROPORÇAO DA FIGURA]\textwidth]{[AQUI VAI O DIRETÓRIO DA FIGURA]}
-        \end{center}
-        \legend{Fonte: \cite{CITAÇÃO}}
-    \end{figure}
-\end{comment}
-
-%==============================================================
-%-------------Templates de inserção de tabelas-----------------
-%==============================================================
-
-\begin{comment}
-    \begin{table}[H]
-        \ABNTEXfontereduzida
-        \centering
-        \caption{\label{tab:[AQUI VAI O ATALHO DA TABELA]} [AQUI VAI O CAPTION DA TABELA]}
-        \begin{tabular}{c c c}
-            \toprule
-            \thead{Item} & \thead{Nome}       & \thead{Descrição} \\
-            \toprule
-            1     & Controlador               & PLC S71200 CPU1214C \\
-            2     & Relé Inteligente          & Simocode pro V PN \\
-            3     & Transformador de Corrente & Simocode 3UF7 \\
-            4     & Switch                    & SCALANCE TAP104 \\
-            5     & Bomba                     & Hydrobloc P500\\
-            \bottomrule
-        \end{tabular}
-        \legend{Fonte: [AQUI VAI A FONTE DA FIGURA]}
-    \end{table}
-\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %==============================================================
@@ -74,43 +6,17 @@
 %==============================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%% Rascunho
-%As perdas no sistema elétrico referem-se à energia gerada que, ao passar pelas linhas de transmissão, não chega a ser comercializada, seja por problemas técnicos ou não técnicos. O primeiro grupo está relacionado a problemas inerentes ao processo de transmissão de energia, como, por exemplo, o efeito Joule. Já o segundo grupo é composto, majoritariamente, por perdas decorrentes do furto de energia, popularmente conhecido como "gato", mas também pode incluir erros de medição, faturamento, entre outros.
-%
-%De acordo com dados apresentados pela Associação Brasileira de Distribuidores de Energia Elétrica (Aneel) no relatório de 2023 intitulado “Perdas de Energia Elétrica na Distribuição”, 6,7\% da energia elétrica gerada, equivalente a $38\ \text{TWh}$, foram perdidos devido a causas não técnicas. Além disso, o relatório estima que essas perdas resultaram em um prejuízo de R\$9,9 bilhões no ano de 2023. É importante destacar que as perdas em um sistema elétrico não geram prejuízo financeiro apenas para a empresa responsável pela distribuição de energia, mas também impactam negativamente a população, uma vez que o prejuízo é diluído nas contas de energia elétrica.
-%
-%A identificação de roubo de energia é um desafio complexo. Segundo Czechowski e Kosek {\color{red}(citar...)}, existem cerca de 300 métodos diferentes para cometer esse tipo de fraude. Embora os avanços em equipamentos de medição tenham sido significativos, ainda é difícil diferenciar dados fraudulentos de dados legítimos {\color{red}(citar...)}.
-%
-%Diante desse cenário, o presente trabalho propõe o uso do método inteligente \textit{Support Vector Machine} para a identificação de possíveis furtos na rede elétrica, com o objetivo de auxiliar na mitigação dessas práticas fraudulentas.
 
-%TODO: ver se é relevante incluir a próxima parte
-%A viabilidade da implementação de um sistema inteligente no contexto do roubo de energia se deve principalmente a existência 
+\section{Histórico da computação}
 
-%%%% Versão melhorada
-O roubo de energia elétrica é um problema crescente e desafiador que afeta a eficiência e a sustentabilidade dos sistemas de distribuição de energia \cite{stracqualursi_systematic_2023}. Estima-se que uma parte significativa das perdas não técnicas nas redes elétricas seja decorrente de práticas fraudulentas, as quais impactam negativamente tanto as concessionárias quanto os consumidores. A Associação Brasileira de Distribuidores de Energia Elétrica (Aneel) destacou em seu relatório de 2023 que cerca de 6,7\% da energia elétrica gerada, equivalente a $38\ \text{TWh}$, foi perdida devido a fraudes e outras perdas não técnicas. Tais práticas representam um prejuízo de aproximadamente R\$9,9 bilhões para o setor, afetando diretamente as tarifas cobradas da população.
+%Incluir aqui um breve histórico da computação clássica, explicando:
 
-Identificar essas práticas fraudulentas, no entanto, é uma tarefa complexa. Estudos conduzidos por \citeonline{czechowski2016most} sugerem que existem cerca de 300 métodos diferentes para cometer fraudes no consumo de energia elétrica. Apesar dos avanços tecnológicos em equipamentos de medição, como os medidores inteligentes, a distinção entre dados legítimos e fraudulentos ainda representa um grande desafio para as concessionárias e para os pesquisadores da área.
-
-
-%Diante desse cenário, o problema de pesquisa deste trabalho é: como podemos identificar de forma eficaz os casos de furto de energia elétrica em meio à vasta quantidade de dados gerados pelos sistemas de medição, especialmente em um contexto onde as técnicas fraudulentas são cada vez mais sofisticadas?
-
-Diante desse cenário, o problema de pesquisa deste trabalho é: treinar um sistema inteligente capaz de identificar eficientemente os casos de furto de energia elétrica a partir da vasta quantidade de dados gerados pelos sistemas de medição.
-
-
-%Uma hipótese plausível é que o uso de métodos de aprendizado de máquina, como o \textit{Support Vector Machine} (SVM), pode melhorar significativamente a capacidade de identificar padrões de consumo suspeitos que indiquem fraudes. Outra hipótese é que a combinação de SVM com outras técnicas de análise de dados, como redes neurais e algoritmos genéticos, poderia aumentar a precisão na detecção de fraudes, minimizando tanto os falsos positivos quanto os falsos negativos.
-
-Para a solução de tal problema sugere-se aqui o uso do método \textit{Support Vector Machine} (SMV) \cite{cortes1995support}, tendo como hipótese que o mesmo tem a capacidade de identificar padrões de consumo suspeitos que indiquem fraudes \cite{7434588}. Outra hipótese é que a combinação de SVM com outras técnicas de análise de dados, como a MANOVA (\textit{Multivariate Analysis of Variance}) \cite{hotelling1933analysis, karhunen1947under, loeve1977elementary}, poderia aumentar a compreensão da dinâmica dos dados, o que por sua vez aumentaria a precisão na detecção de fraudes.
-
-O objetivo geral deste trabalho é desenvolver um modelo de detecção de fraudes em redes elétricas utilizando o método \textit{Support Vector Machine}. Os objetivos específicos incluem: (1) revisar a literatura existente sobre técnicas de detecção de fraudes em redes elétricas; (2) implementar o modelo de SVM utilizando dados de uma concessionária de energia; (3) avaliar o desempenho do modelo em termos de precisão e capacidade de generalização; (4) utilizar a MANOVA para compreender a dinâmica dos dados e (5) extrair conclusões a partir dos resultados obtidos.
-
-Este trabalho é relevante tanto para a comunidade científica quanto para o setor elétrico, pois oferece uma solução potencial para um problema que causa bilhões de reais em prejuízos anualmente. A implementação de um sistema eficaz de detecção de fraudes não só ajudará as concessionárias a reduzir perdas financeiras, mas também contribuirá para a justiça tarifária, garantindo que os custos da energia não sejam indevidamente elevados devido às práticas fraudulentas.
-
-%A metodologia deste trabalho envolve uma pesquisa bibliográfica inicial para fundamentar teoricamente o uso de \textit{Support Vector Machine} na detecção de fraudes. Em seguida, será realizada a aplicação do modelo a um conjunto de dados de consumo de energia fornecidos por uma concessionária. A análise dos resultados permitirá avaliar a eficácia do modelo proposto em comparação com outras abordagens de detecção de fraudes.
-
-
-
-
-
+%1. O que é computação
+%2. Surgimento do que consideramos um computador clássico
+%3. Evolução da computação clássica e limites da computação clássica
+%4. Por que computação quântica
+%5. Histórico da computação quântica
+%6. Computação quântica atualmente e perspectivas para o futuro
 
 
 

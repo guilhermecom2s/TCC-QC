@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: Textual/introducao.aux
+A level-1 auxiliary file: Textual/referencial.aux
 A level-1 auxiliary file: Textual/metodologia.aux
 The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -15,6 +16,14 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: Postextual/references.bib
+Warning--I didn't find a database entry for "cortes1995support"
+Warning--I didn't find a database entry for "samoshyn_fraud_2019"
+Warning--I didn't find a database entry for "pedregosa2011scikit"
+Warning--I didn't find a database entry for "wright1921correlation"
+Warning--I didn't find a database entry for "berk1977tolerance"
+Warning--I didn't find a database entry for "hotelling1933analysis"
+Warning--I didn't find a database entry for "karhunen1947under"
+Warning--I didn't find a database entry for "loeve1977elementary"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -24,44 +33,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 13 entries,
+You've used 3 entries,
             6714 wiz_defined-function locations,
-            1273 strings with 11523 characters,
-and the built_in function-call counts, 11742 in all, are:
-= -- 1154
-> -- 267
-< -- 152
-+ -- 269
-- -- 81
-* -- 754
-:= -- 1561
-add.period$ -- 39
-call.type$ -- 13
-change.case$ -- 108
-chr.to.int$ -- 33
-cite$ -- 11
-duplicate$ -- 831
-empty$ -- 718
-format.name$ -- 391
-if$ -- 2600
+            1215 strings with 9658 characters,
+and the built_in function-call counts, 1768 in all, are:
+= -- 253
+> -- 16
+< -- 2
++ -- 52
+- -- 5
+* -- 84
+:= -- 285
+add.period$ -- 4
+call.type$ -- 3
+change.case$ -- 12
+chr.to.int$ -- 5
+cite$ -- 1
+duplicate$ -- 46
+empty$ -- 142
+format.name$ -- 23
+if$ -- 432
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 211
-newline$ -- 63
-num.names$ -- 55
-pop$ -- 263
+missing$ -- 39
+newline$ -- 12
+num.names$ -- 5
+pop$ -- 55
 preamble$ -- 1
-purify$ -- 46
+purify$ -- 9
 quote$ -- 0
-skip$ -- 950
+skip$ -- 159
 stack$ -- 1
-substring$ -- 526
-swap$ -- 353
-text.length$ -- 20
+substring$ -- 72
+swap$ -- 17
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 83
+while$ -- 8
 width$ -- 0
-write$ -- 187
+write$ -- 23
+(There were 8 warnings)
