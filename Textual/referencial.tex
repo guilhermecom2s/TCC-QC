@@ -7,7 +7,26 @@
 \subsection{Qubits}
 % Aqui falaremos sobre qubits, a estrututa básica da computação quântica
 
-O bit quântico (\textit{quantum bit}), ou apenas qubit, é a unidade fundamental da computação quântica, assim como o bit é para a computação clássica. Compara um qubit clássico com um qubit pode nos ajudar a entender esse último. Um bit clássico terá sempre apenas um de dois valores possíveis: $0$ ou $1$ e, desde que nada aconteça para mudar o estado, o bit permanecerá com um desses dados valores \cite{sutor2019dancing}. De maneira análoga, quanto medimos um qubit, também pode-se obter um entre dois estados: $\ket{0}$ ou $\ket{1}$ (mais sobre essa notação no capítulo (incluir capítulo para falar sobre os brakets...)), porém, a grande diferença do qubit, é que antes de ser medido, ele pode estar em um estado de superposição, possuindo valores intermediários entre $\ket{0}$ e $\ket{1}$. Os estados de um qubit podem ser representados através da esfera de Bloch...
+O bit quântico (\textit{quantum bit}), ou simplesmente qubit, é a unidade fundamental da computação quântica, assim como o bit é para a computação clássica. Comparar um bit clássico com um qubit ajuda a compreender sua natureza. Um bit clássico pode assumir apenas um de dois valores possíveis: $0$ ou $1$. Enquanto nada o modifique, ele permanecerá em um desses dois estados fixos \cite{sutor2019dancing}. 
+
+De maneira análoga, quando medimos um qubit, obtemos um de dois resultados possíveis: $\ket{0}$ ou $\ket{1}$ (a notação de \textit{bras} e \textit{kets} será abordada em capítulo posterior). A principal diferença é que, antes da medição, o qubit pode existir em um estado de superposição, descrito pela combinação linear:
+\[
+\ket{\psi} = \alpha\ket{0} + \beta\ket{1}, \quad \text{com } |\alpha|^2 + |\beta|^2 = 1,
+\]
+onde $\alpha$ e $\beta$ são amplitudes complexas associadas às probabilidades de o qubit ser encontrado em $\ket{0}$ ou $\ket{1}$, respectivamente \cite{sutor2019dancing}. 
+
+A superposição é um princípio fundamental da mecânica quântica que estabelece que, antes da medição, um sistema pode existir simultaneamente em múltiplos estados possíveis. No ato da medição, ocorre o chamado \textit{colapso da função de onda}, fazendo o sistema assumir um dos estados definidos. No caso de um qubit, os dois estados possíveis formam uma base bidimensional, e a superposição pode ser visualizada geometricamente na Esfera de Bloch (Fig.~\ref{fig:esfera}), que representa todos os estados quânticos possíveis de um qubit.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\linewidth]{./Figuras/Bloch_sphere.png}
+    \caption{Representação de um qubit na Esfera de Bloch.}
+    \label{fig:esfera}
+\end{figure}
+
+Um equívoco comum é atribuir à superposição, isoladamente, a origem do alto poder computacional dos computadores quânticos. Embora ela seja condição necessária, não é suficiente. A superposição permite o \textit{paralelismo quântico}, em que múltiplas combinações de estados podem ser processadas simultaneamente. No entanto, sem mecanismos de interferência controlada, as medições resultariam apenas em resultados aleatórios, não necessariamente úteis para resolver um problema. 
+
+É por meio da interferência entre amplitudes quânticas que os algoritmos quânticos exploram as propriedades da superposição para eliminar resultados incorretos e reforçar os corretos. Os algoritmos de Shor e de Grover exemplificam esse princípio: ambos utilizam a superposição e a interferência de forma controlada para atingir ganhos de desempenho significativos em relação aos métodos clássicos.
 
 
 
