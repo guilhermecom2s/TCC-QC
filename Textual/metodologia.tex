@@ -1,0 +1,42 @@
+%==============================================================
+%------------------------METODOLOGIA---------------------------
+%--------------main.tex, v1.0.0, JonathanTSilva----------------
+%==============================================================
+
+\chapter{Metodologia}\label{cap:metodologia}
+
+%%%%%%%%%%%RASCUNHO
+
+%O objetivo desse trabalho é aplicar o método inteligente \textit{Support Vector Machine} (SVM) {\color{red}(citar...)} à um banco de dados que possua as informações sobre clientes de uma companhia distribuidora de energia elétrica e a partir de um treinamento ser capaz de identificar com clientes fraudulentos de não fraudulentos.
+%
+%O desenvolvimento do projeto será realizado através da linguagem de programação \textit{Python}. Inicialmente será realizado o tratamento do banco de dados, uma vez que é comum que os bancos venham com informações faltantes, colunas com valores numéricos discrepantes entre outros problemas que podem afetar a etapa posterior de treinamento do sistema inteligente.
+%
+%A etapa seguinte ao tratamento de dados será a implementação do \textit{Support Vector Machine} que será realizada com o uso da biblioteca \textit{Scikit Learn} {\color{red}(citar...)}. Para o treinamento do modelo será feita uma divisão no banco de dados em duas partes, uma contendo 80\% do total que será usada para o treinamento em si, os 20\% restantes serão utilizados para a validação do modelo obtido após realizado o treinamento, o que nos indicará a capacidade assertiva do método desenvolvido.
+%
+%Para a etapa de avaliar a assertividade fará-se uso do indicador $R^2$ {\color{red}(citar...)}, além disso, com a finalidade de entender melhor a dinâmica do banco de dados e compreender quais são os principais fatores que levam um suposto cliente a furtar energia elétrica será implementada a MANOVA  {\color{red}(citar...)}.
+%
+%Por fim, será feita a escrita da monografia a partir dos dados obtidos, nessa etapa fará-se o uso de Inteligência Artificial para correções de erros ortográficos e outros ajustes gramaticais.
+
+
+%%%%%%%%% TEXTO
+
+O objetivo deste trabalho é treinar e aplicar o método inteligente \textit{Support Vector Machine} (SVM) \cite{cortes1995support} para identificar clientes fraudulentos em um banco de dados de uma companhia distribuidora de energia elétrica. O SVM será treinado para diferenciar entre padrões de consumo legítimos e fraudulentos, auxiliando na detecção de fraudes com maior precisão.
+
+
+A pesquisa adota uma abordagem quantitativa, focada na análise de dados históricos fornecidos por uma companhia distribuidora de energia elétrica e disponibilizados gratuitamente na plataforma \textit{Kaggle} \cite{samoshyn_fraud_2019}. Essa abordagem permite a aplicação de técnicas de aprendizado de máquina para modelagem preditiva e identificação de padrões associados ao furto de energia elétrica.
+
+
+O desenvolvimento do projeto será conduzido utilizando a linguagem de programação \textit{Python}, escolhida por sua robustez e extensa biblioteca de ferramentas para análise de dados e aprendizado de máquina. O método \textit{Support Vector Machine} será implementado com a biblioteca \textit{Scikit-Learn} \cite{pedregosa2011scikit}. A metodologia possui as seguintes etapas: tratamento de dados, treinamento do modelo, avaliação da assertividade e escrita do trabalho.
+
+
+Inicialmente, será realizado o tratamento do banco de dados com informações do consumo de energia, uma vez que é comum que esses dados apresentem problemas como informações faltantes, valores discrepantes e outras inconsistências. Essa etapa é essencial para garantir a qualidade do treinamento do modelo.
+
+Após o tratamento, o banco de dados será dividido em duas partes: 80\% dos dados serão utilizados para o treinamento do SVM, enquanto os 20\% restantes serão reservados para a validação do modelo, cuja eficácia será avaliada utilizando o coeficiente de determinação $R^2$ \cite{wright1921correlation, berk1977tolerance}.
+
+Além disso, será realizada uma Análise Multivariada de Variância (MANOVA) \cite{hotelling1933analysis, karhunen1947under, loeve1977elementary} para entender melhor os principais fatores que influenciam o furto de energia elétrica, permitindo uma análise mais detalhada dos dados e dos padrões detectados.
+
+%O universo deste estudo é composto por clientes de uma companhia distribuidora de energia elétrica, cujo banco de dados será utilizado na pesquisa. A amostra consiste nos registros de consumo desses clientes, abrangendo tanto casos de consumo legítimo quanto de possíveis fraudes, o que permitirá a construção e validação do modelo preditivo.
+
+Por fim, a escrita da monografia será realizada com base nos dados e resultados obtidos ao longo do projeto. Para garantir a qualidade do texto, será utilizada uma ferramenta de Inteligência Artificial para correções ortográficas e ajustes gramaticais, proporcionando maior precisão e clareza na apresentação dos resultados.
+
+  

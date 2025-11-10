@@ -1,0 +1,329 @@
+%==============================================================
+%------------------JONATHAN TOBIAS DA SILVA--------------------
+%--------------------ENGENHARIA ELÉTRICA-----------------------
+%------------INSTITUTO FEDERAL- CAMPUS SERTÃOZINHO-------------
+%--------------main.tex, v1.0.0, JonathanTSilva----------------
+%
+%------------------github.com/JonathanTSilva-------------------
+%---------------linkedin.com/in/JonathanTSilva-----------------
+%
+% Copyright, 2012–2021 by Abntex2 at https://www.abntex.net.br/
+%==============================================================
+
+\documentclass[
+	%---------------OPÇÕES DA CLASSE MEMOIR-------------------|
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão em verso e anverso. Oposto a "oneside" e "twoside"
+	a4paper,			% tamanho do papel. 
+	%---------------OPÇÕES DA CLASSE ABNTEX2------------------|
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	%----------------OPÇÕES DO PACOTE BABEL-------------------|
+	english,			% idioma adicional para hifenização
+	%french,			% idioma adicional para hifenização
+	%spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+%-------------------------PACOTES-----------------------------|
+\input{packages}
+
+%--------------------------FONTES-----------------------------|
+%-----ARIAL---------------%
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+%-----TIMES NEW ROMAN-----%
+%\usepackage{times}
+
+%-----ADOBE UTOPIA--------%
+%\usepackage{fourier}
+
+%-------------------CAPA E FOLHA DE ROSTO---------------------|
+\input{Pretextual/capa}
+
+%==============================================================
+%----------------------CONFIGURAÇÕES---------------------------
+%==============================================================
+
+%----------------------PACOTE: HYPEREF------------------------|
+\makeatletter
+\hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author},
+    pdfsubject = {\imprimirpreambulo},
+    pdfborder = {0 0 0},
+    pdfkeywords = {}{}{}{},
+    pdfcreator = {LaTeX with abnTeX2},
+    colorlinks = true,
+    linkcolor = blue,
+    citecolor = blue,
+    urlcolor = blue
+}
+\makeatother
+
+%----------------------PACOTE: BACKREF------------------------|
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}  % Usado sem a opção hyperpageref de backref
+\renewcommand{\backref}{}                                   % Texto padrão antes do número das páginas
+\renewcommand*{\backrefalt}[4]{                             % Define os textos da citação
+	\ifcase #1%
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+
+%-------------------------APARÊNCIA---------------------------|
+\definecolor{blue}{RGB}{41,5,195}
+\definecolor{gray}{RGB}{190,190,190}
+
+%--------------------------TABELAS----------------------------|
+\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
+
+%------POSICIONAMENTO DE FIGS E TABS EM PÁGINA EM BRANCO------|
+% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
+% em um página em branco. Ver https://github.com/abntex/abntex2/issues/170
+\makeatletter
+\setlength{\@fptop}{5pt} % Define a distância de topo da página no primeiro flutuante
+\makeatother
+
+\iffalse %COMENTADO
+    %---------CRIAÇÃO DE QUADROS E LISTA DE QUADROS-----------|
+    % Possibilita criação de Quadros e Lista de quadros.
+    % Ver https://github.com/abntex/abntex2/issues/176
+    \newcommand{\quadroname}{Quadro}
+    \newcommand{\listofquadrosname}{Lista de quadros}
+    
+    \newfloat[chapter]{quadro}{loq}{\quadroname}
+    \newlistof{listofquadros}{loq}{\listofquadrosname}
+    \newlistentry{quadro}{loq}{0}
+    
+    % configurações para atender às regras da ABNT
+    \setfloatadjustment{quadro}{\centering}
+    \counterwithout{quadro}{chapter}
+    \renewcommand{\cftquadroname}{\quadroname\space} 
+    \renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+    
+    \setfloatlocations{quadro}{hbtp}
+    
+    %\floatsetup[figure]{capposition=top}
+\fi
+
+%------------------------ESPAÇAMENTO--------------------------|
+\setlength{\parindent}{1.3cm} % O tamanho do parágrafo
+\setlength{\parskip}{0.2cm}   % tente também \onelineskip; Espaçamento entre um par e outro
+\OnehalfSpacing
+
+%--------------------------TÍTULOS----------------------------|
+%\renewcommand{\ABNTEXchapterfont}{\fontfamily{cmr}\fontseries{b}\selectfont}
+%\renewcommand{\ABNTEXchapterfont}{\bfseries} % Deixar título de capítulos em negrito
+
+%----------------------COMPILA O ÍNDICE-----------------------|
+\makeindex
+
+
+%==============================================================
+%-------------------------DOCUMENTO----------------------------
+%==============================================================
+
+\begin{document}
+    %------------------------NOTA-----------------------------|
+    
+    %-----------------------IDIOMA----------------------------|
+    %\selectlanguage{english}
+    \selectlanguage{brazil}
+
+    \frenchspacing % Retira espaço extra obsoleto entre as frases.
+    
+    %__________________________________________________________
+    %----------------ELEMENTOS PRÉ-TEXTUAIS--------------------
+    
+    %------------------------CAPA-----------------------------|
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.45]{Figuras/IFSP.png}
+        \label{fig:logoIFSP}
+    \end{figure}
+    
+    \vspace{-1cm}
+    
+    \begin{center}
+        \textbf{\sffamily\large Instituto Federal de Educação, Ciência e Tecnologia de São Paulo \\ Campus Sertãozinho}
+    \end{center}
+    
+    \vspace{3cm}
+    
+    \imprimircapa
+%    
+%    %-------------------FOLHA DE ROSTO------------------------|
+%    \imprimirfolhaderosto*{} % (o * indica que haverá a ficha bibliográfica)
+%    %-----------------FICHA CATALOGRÁFICA---------------------|
+%    \input{Pretextual/ficha-catalografica}
+%    %-----------------------ERRATA----------------------------|
+%    \input{Pretextual/errata}
+%    %---------------------DEDICATÓRIA-------------------------|
+%    \input{Pretextual/dedicatoria}
+%    %-------------------AGRADECIMENTOS------------------------|
+%    \input{Pretextual/agradecimentos}
+%    %----------------------EPÍGRAFE---------------------------|
+%    \input{Pretextual/epigrafe}
+%    %----------------------RESUMOS----------------------------|
+%    \input{Pretextual/resumos}
+%    
+%    %-----------------------LISTAS----------------------------|
+%    %-ILUSTRAÇÕES---------------------------------------------|
+%    \pdfbookmark[0]{\listfigurename}{lof}
+%    \listoffigures*
+%    \cleardoublepage
+%    
+%    %-TABELAS-------------------------------------------------|
+%    \pdfbookmark[0]{\listtablename}{lot}
+%    \listoftables*
+%    \cleardoublepage
+%    
+%    %-SIGLAS E ABREVIATURAS-----------------------------------|
+%    \input{Pretextual/siglas}
+%    
+%    %-SÍMBOLOS------------------------------------------------|
+%    \input{Pretextual/simbolos}
+%    
+%    %-----------------------SUMÁRIO---------------------------|
+%    \pdfbookmark[0]{\contentsname}{toc}
+%    \tableofcontents*
+%    \cleardoublepage
+    
+    %__________________________________________________________
+    %------------------ELEMENTOS TEXTUAIS----------------------
+    
+    \textual
+    
+    %------------------PARTE: PREPARAÇÃO----------------------|
+    %\part{Preparação da pesquisa}
+    
+    %-----------------CAPÍTULO: INTRODUÇÃO--------------------|
+    \include{Textual/introducao}
+    
+%    %-------------CAPÍTULO: REFERENCIAL TEÓRICO---------------|
+%    \include{Textual/referencial}
+    
+    %----------------CAPÍTULO: METODOLOGIA--------------------|
+    \include{Textual/metodologia}
+    
+%    %-----------------CAPÍTULO: RESULTADOS--------------------|
+%    \include{Textual/resultados}
+%    
+%    %-----------------CAPÍTULO: CONCLUSÃO--------------------|
+%    \include{Textual/conclusao}
+    
+    %-----------------CAPÍTULO: EXEMPLO1----------------------|
+    %\include{Textual/capExemplo1} % Capítulo com exemplos de comandos inseridos de arquivo externo
+    
+    %-----------------CAPÍTULO: EXEMPLO2----------------------|
+    %\include{Textual/capExemplo2} % Capítulo com exemplos de comandos inseridos de arquivo externo
+    
+    \phantompart % Finaliza a parte no bookmark do PDF para que se inicie o bookmark na raiz e adiciona espaço de parte no Sumário
+    
+    %__________________________________________________________
+    %----------------ELEMENTOS PÓS-TEXTUAIS--------------------
+    
+    \postextual
+    
+    %---------------------BIBLIOGRAFIA-------------------------|
+    %\bibliography{Postextual/references}
+    \providecommand{\abntreprintinfo}[1]{%
+    	\citeonline{#1}}
+    \setlength{\labelsep}{0pt}\begin{thebibliography}{}
+    	\providecommand{\abntrefinfo}[3]{}
+    	\providecommand{\abntbstabout}[1]{}
+    	\abntbstabout{v-1.9.7 }
+    	
+    	\bibitem[Berk 1977]{berk1977tolerance}
+    	\abntrefinfo{Berk}{Berk}{1977}
+    	{BERK, K.~N. Tolerance and condition in regression computations.
+    		\textbf{Journal of the American Statistical Association}, Taylor \& Francis,
+    		v.~72, n.~360a, p. 863--866, 1977.}
+    	
+    	\bibitem[Cortes 1995]{cortes1995support}
+    	\abntrefinfo{Cortes}{Cortes}{1995}
+    	{CORTES, C. Support-vector networks.
+    		\textbf{Machine Learning}, 1995.}
+    	
+    	\bibitem[Czechowski e Kosek 2016]{czechowski2016most}
+    	\abntrefinfo{Czechowski e Kosek}{Czechowski; Kosek}{2016}
+    	{CZECHOWSKI, R.; KOSEK, A.~M. The most frequent energy theft techniques and
+    		hazards in present power energy consumption. In:  IEEE. \textbf{2016 joint
+    			workshop on cyber-physical security and resilience in smart grids (CPSR-SG)}.
+    		[S.l.], 2016. p.~1--7.}
+    	
+    	\bibitem[Hotelling 1933]{hotelling1933analysis}
+    	\abntrefinfo{Hotelling}{Hotelling}{1933}
+    	{HOTELLING, H. Analysis of a complex of statistical variables into principal
+    		components.
+    		\textbf{Journal of educational psychology}, Warwick \& York, v.~24, n.~6,
+    		p.~417, 1933.}
+    	
+    	\bibitem[Jindal et al. 2016]{7434588}
+    	\abntrefinfo{Jindal et al.}{Jindal et al.}{2016}
+    	{JINDAL, A. et al. Decision tree and svm-based data analytics for theft
+    		detection in smart grid.
+    		\textbf{IEEE Transactions on Industrial Informatics}, v.~12, n.~3, p.
+    		1005--1016, 2016.}
+    	
+    	\bibitem[Karhunen 1947]{karhunen1947under}
+    	\abntrefinfo{Karhunen}{Karhunen}{1947}
+    	{KARHUNEN, K. Under lineare methoden in der wahr scheinlichkeitsrechnung.
+    		\textbf{Annales Academiae Scientiarun Fennicae Series A1: Mathematia Physica},
+    		v.~47, 1947.}
+    	
+    	\bibitem[Lo{\`e}ve 1977]{loeve1977elementary}
+    	\abntrefinfo{Lo{\`e}ve}{Lo{\`e}ve}{1977}
+    	{LO{\`E}VE, M. \textbf{Elementary probability theory}. [S.l.]: Springer, 1977.}
+    	
+    	\bibitem[Pedregosa et al. 2011]{pedregosa2011scikit}
+    	\abntrefinfo{Pedregosa et al.}{Pedregosa et al.}{2011}
+    	{PEDREGOSA, F. et al. Scikit-learn: Machine learning in python.
+    		\textbf{Journal of machine learning research}, v.~12, n.~Oct, p. 2825--2830,
+    		2011.}
+    	
+    	\bibitem[Samoshyn 2019]{samoshyn_fraud_2019}
+    	\abntrefinfo{Samoshyn}{Samoshyn}{2019}
+    	{SAMOSHYN, A. \textbf{Fraud Detection in Electricity and Gas Consumption}.
+    		2019.
+    		Atualizado à 4 anos. Acesso em: 04-09-2024.
+    		Dispon{\'\i}vel em:
+    		\url{https://www.kaggle.com/datasets/mrmorj/fraud-detection-in-electricity-and-gas-consumption?select=SampleSubmission+\%282\%29.csv}.}
+    	
+    	\bibitem[Stracqualursi et al. 2023]{stracqualursi_systematic_2023}
+    	\abntrefinfo{Stracqualursi et al.}{Stracqualursi et al.}{2023}
+    	{STRACQUALURSI, E. et al. Systematic review of energy theft practices and
+    		autonomous detection through artificial intelligence methods.
+    		\textbf{Renewable and Sustainable Energy Reviews}, v.~184, p. 113544, 2023.
+    		ISSN 1364-0321.}
+    	
+    	\bibitem[Wright 1921]{wright1921correlation}
+    	\abntrefinfo{Wright}{Wright}{1921}
+    	{WRIGHT, S. Correlation and causation.
+    		\textbf{Journal of agricultural research}, v.~20, n.~7, p.~557, 1921.}
+    	
+    \end{thebibliography}
+    
+%    %----------------------GLOSSÁRIO---------------------------|
+%    %\glossary % Consulte o manual da classe abnTeX2 para orientações sobre o glossário.
+%
+%    %----------------------APÊNDICES---------------------------|
+%    \input{Postextual/apendices}
+%    
+%    %------------------------ANEXOS----------------------------|
+%    \input{Postextual/anexos}
+%    
+%    %-------------------ÍNDICE REMISSIVO-----------------------|
+%    \phantompart
+    \printindex
+    
+\end{document}
+
+
