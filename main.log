@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.10)  10 DEC 2025 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.21)  21 DEC 2025 11:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1138,84 +1138,81 @@ l.196     \include{Textual/introducao}
 
  (Textual/referencial.tex
 Cap\'{\i }tulo 2.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 19.
-(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 19.
- (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 19.
- (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 19.
- (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 19.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 19.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
- (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\Vick\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
- (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\Vick\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-<./Figuras/Bloch_sphere.png, id=25, 250.9375pt x 265.99374pt>
-File: ./Figuras/Bloch_sphere.png Graphic file (type png)
-<use ./Figuras/Bloch_sphere.png>
-Package pdftex.def Info: ./Figuras/Bloch_sphere.png  used on input line 31.
-(pdftex.def)             Requested size: 136.50139pt x 144.69786pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [2
 
 
 
 
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]) [3 <./Figuras/Bloch_sphere.png>]
+] [3] [4]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 56.
+ (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 56.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 56.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 56.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 56.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 56.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\Vick\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\Vick\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [5{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}] [6{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<./Figuras/Bloch_sphere.png, id=98, 250.9375pt x 265.99374pt>
+File: ./Figuras/Bloch_sphere.png Graphic file (type png)
+<use ./Figuras/Bloch_sphere.png>
+Package pdftex.def Info: ./Figuras/Bloch_sphere.png  used on input line 94.
+(pdftex.def)             Requested size: 136.50139pt x 144.69786pt.
+ [7 <./Figuras/Bloch_sphere.png>]) [8]
 \openout2 = `Textual/metodologia.aux'.
 
  (Textual/metodologia.tex
 Cap\'{\i }tulo 3.
 
-LaTeX Warning: Citation `cortes1995support' on page 4 undefined on input line 23.
+LaTeX Warning: Citation `cortes1995support' on page 9 undefined on input line 23.
 
 
-LaTeX Warning: Citation `samoshyn_fraud_2019' on page 4 undefined on input line 26.
+LaTeX Warning: Citation `samoshyn_fraud_2019' on page 9 undefined on input line 26.
 
 
-LaTeX Warning: Citation `pedregosa2011scikit' on page 4 undefined on input line 29.
+LaTeX Warning: Citation `pedregosa2011scikit' on page 9 undefined on input line 29.
 
 
-LaTeX Warning: Citation `wright1921correlation' on page 4 undefined on input line 34.
+LaTeX Warning: Citation `wright1921correlation' on page 9 undefined on input line 34.
 
 
-LaTeX Warning: Citation `berk1977tolerance' on page 4 undefined on input line 34.
+LaTeX Warning: Citation `berk1977tolerance' on page 9 undefined on input line 34.
 
 
-LaTeX Warning: Citation `hotelling1933analysis' on page 4 undefined on input line 36.
+LaTeX Warning: Citation `hotelling1933analysis' on page 9 undefined on input line 36.
 
 
-LaTeX Warning: Citation `karhunen1947under' on page 4 undefined on input line 36.
+LaTeX Warning: Citation `karhunen1947under' on page 9 undefined on input line 36.
 
 
-LaTeX Warning: Citation `loeve1977elementary' on page 4 undefined on input line 36.
+LaTeX Warning: Citation `loeve1977elementary' on page 9 undefined on input line 36.
 
-) [4
+) [9
 
 
 
@@ -1228,7 +1225,7 @@ LaTeX Warning: Citation `loeve1977elementary' on page 4 undefined on input line 
 bibitemlist
 ) (main.ind) 
 AED: lastpage setting LastPage
-[5
+[10
 
 
 
@@ -1242,20 +1239,20 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: B60CCFDC94A72E43D3A9F1CDEB3B0275;692.
+(rerunfilecheck)             Checksum: 671185C336C792745EB6D11A9905BBCF;1375.
  ) 
 Here is how much of TeX's memory you used:
- 25129 strings out of 474486
- 415374 string characters out of 5753572
+ 25293 strings out of 474486
+ 418347 string characters out of 5753572
  1935542 words of memory out of 5000000
- 46810 multiletter control sequences out of 15000+600000
- 630556 words of font info for 140 fonts, out of 8000000 for 9000
+ 46906 multiletter control sequences out of 15000+600000
+ 632771 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,12n,136p,1036b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,13n,136p,1036b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (6 pages, 269190 bytes).
+Output written on main.pdf (11 pages, 312948 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 41051 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 41115 words of extra memory for PDF output out of 42996 (max. 10000000)
 

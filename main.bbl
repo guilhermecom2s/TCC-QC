@@ -5,6 +5,56 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
+\bibitem[Campbell-Kelly et al. 2023]{campbell2023computer}
+\abntrefinfo{Campbell-Kelly et al.}{CAMPBELL-KELLY et al.}{2023}
+{CAMPBELL-KELLY, M. et al. \textbf{Computer: A history of the information
+  machine}. [S.l.]: Routledge, 2023.}
+
+\bibitem[Feynman 2018]{feynman2018simulating}
+\abntrefinfo{Feynman}{FEYNMAN}{2018}
+{FEYNMAN, R.~P. Simulating physics with computers. In:  \textbf{Feynman and
+  computation}. [S.l.]: cRc Press, 2018. p. 133--153.}
+
+\bibitem[Hodges 2014]{hodges2014alan}
+\abntrefinfo{Hodges}{HODGES}{2014}
+{HODGES, A. \textbf{Alan Turing: The Enigma: The Book That Inspired the Film"
+  The Imitation Game"}. [S.l.]: Princeton University Press, 2014.}
+
+\bibitem[Kaiser e Granade 2021]{kaiser2021learn}
+\abntrefinfo{Kaiser e Granade}{KAISER; GRANADE}{2021}
+{KAISER, S.~C.; GRANADE, C. \textbf{Learn quantum computing with python and
+  Q\#: A hands-on approach}. [S.l.]: Simon and Schuster, 2021.}
+
+\bibitem[Kirkpatrick, Jr e Vecchi 1983]{kirkpatrick1983optimization}
+\abntrefinfo{Kirkpatrick, Jr e Vecchi}{KIRKPATRICK; JR; VECCHI}{1983}
+{KIRKPATRICK, S.; JR, C.~D. G.; VECCHI, M.~P. Optimization by simulated
+  annealing.
+\textbf{science}, American association for the advancement of science, v.~220,
+  n.~4598, p. 671--680, 1983.}
+
+\bibitem[Moore et al. 1965]{moore1965cramming}
+\abntrefinfo{Moore et al.}{MOORE et al.}{1965}
+{MOORE, G.~E. et al. \textbf{Cramming more components onto integrated
+  circuits}. 1965.}
+
+\bibitem[Rivest, Shamir e Adleman 1978]{rivest1978method}
+\abntrefinfo{Rivest, Shamir e Adleman}{RIVEST; SHAMIR; ADLEMAN}{1978}
+{RIVEST, R.~L.; SHAMIR, A.; ADLEMAN, L. A method for obtaining digital
+  signatures and public-key cryptosystems.
+\textbf{Communications of the ACM}, ACM New York, NY, USA, v.~21, n.~2, p.
+  120--126, 1978.}
+
+\bibitem[Shor 1994]{shor1994algorithms}
+\abntrefinfo{Shor}{SHOR}{1994}
+{SHOR, P.~W. Algorithms for quantum computation: discrete logarithms and
+  factoring. In:  IEEE. \textbf{Proceedings 35th annual symposium on
+  foundations of computer science}. [S.l.], 1994. p. 124--134.}
+
+\bibitem[Sipser 1996]{sipser1996introduction}
+\abntrefinfo{Sipser}{SIPSER}{1996}
+{SIPSER, M. Introduction to the theory of computation.
+\textbf{ACM Sigact News}, ACM New York, NY, USA, v.~27, n.~1, p. 27--29, 1996.}
+
 \bibitem[Sutor 2019]{sutor2019dancing}
 \abntrefinfo{Sutor}{SUTOR}{2019}
 {SUTOR, R. \textbf{Dancing with qubits}. [S.l.]: Packt Publishing Birmingham,

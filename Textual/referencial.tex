@@ -3,10 +3,73 @@
 
 % PARTE DA VIC
 
-\section{Breve histórico da computação}
-BLA BLA BLA BLA BLA
+\section{Computação: fundamentos e evolução histórica}
+
+\subsection{Definição geral de computação}
+De forma ampla, a computação pode ser definida como o conjunto de processos pelos quais um sistema recebe entradas, realiza algum tipo de processamento sobre essas informações e produz saídas \cite{kaiser2021learn}. Essa definição independe da natureza física do sistema computacional, sendo válida tanto para dispositivos mecânicos quanto eletrônicos ou digitais. O processamento pode envolver operações aritméticas, lógicas, simbólicas ou algorítmicas, desde que exista uma transformação bem definida entre os dados de entrada e os resultados obtidos na saída.
+
+Sob essa perspectiva, a computação não se restringe aos computadores modernos, mas abrange qualquer mecanismo capaz de executar regras sistemáticas para manipulação de informação. Essa visão permite compreender a computação como um conceito anterior e mais amplo do que os próprios computadores digitais.
 
 
+\subsection{Computação antes dos computadores digitais}
+Muito antes do surgimento dos computadores eletrônicos, diferentes ferramentas e métodos foram desenvolvidos para auxiliar o ser humano em tarefas computacionais \cite{campbell2023computer}. Um dos exemplos mais antigos é o ábaco, utilizado por diversas civilizações como instrumento para realizar operações aritméticas básicas. Embora simples, o ábaco já incorpora a ideia fundamental de representação e manipulação sistemática de informações.
+
+Durante os séculos seguintes, surgiram dispositivos mecânicos mais sofisticados, como as máquinas de cálculo de Blaise Pascal e Gottfried Wilhelm Leibniz, capazes de executar automaticamente somas, subtrações e, em alguns casos, multiplicações e divisões. Paralelamente, grande parte dos cálculos científicos e de engenharia continuava sendo realizada manualmente, frequentemente com o auxílio de tabelas matemáticas e métodos numéricos.
+
+Esses exemplos evidenciam que a computação, entendida como processamento de informação, antecede a computação digital moderna, sendo impulsionada por necessidades práticas nas áreas de comércio, ciência, engenharia e navegação.
+
+
+\subsection{Surgimento dos computadores digitais}
+O avanço tecnológico do século XX possibilitou a transição da computação mecânica para a computação eletromecânica e, posteriormente, eletrônica. Os primeiros computadores eletromecânicos utilizavam relés para implementar operações lógicas e aritméticas, enquanto os computadores eletrônicos passaram a empregar válvulas a vácuo, permitindo velocidades de processamento significativamente maiores.
+
+Um exemplo histórico emblemático é o uso de máquinas computacionais no contexto da Segunda Guerra Mundial, especialmente nos esforços de criptoanálise. A máquina Enigma, utilizada para cifrar comunicações militares, representava um problema computacional de grande complexidade para a época \cite{hodges2014alan}. O desenvolvimento de métodos sistemáticos e máquinas especializadas para quebrar suas cifras ilustra de forma clara como a computação passou a desempenhar um papel estratégico na resolução de problemas reais de alta relevância prática.
+
+Esse período marca o início da computação digital como uma ferramenta central para lidar com problemas que extrapolavam a capacidade do cálculo manual ou puramente mecânico.
+
+Após o surgimento dos primeiros computadores eletrônicos, a computação clássica passou por uma evolução acelerada, impulsionada principalmente por avanços no hardware. As válvulas a vácuo foram gradualmente substituídas por transistores, que ofereciam maior confiabilidade, menor consumo de energia e maior densidade de integração. Posteriormente, o desenvolvimento dos circuitos integrados permitiu a miniaturização e a integração de um número crescente de componentes em um único chip.
+
+Esse avanço tecnológico é frequentemente associado à chamada Lei de Moore \cite{moore1965cramming}, que observa o crescimento aproximadamente exponencial do número de transistores em circuitos integrados ao longo do tempo. Como consequência, houve um aumento contínuo no poder computacional disponível, tanto em termos de velocidade quanto de capacidade de armazenamento.
+
+Além do aumento da densidade de componentes, a computação clássica também evoluiu por meio do paralelismo, explorando arquiteturas com múltiplos núcleos, processamento vetorial e sistemas distribuídos. Essas estratégias permitiram ganhos adicionais de desempenho, especialmente para aplicações que podem ser decompostas em tarefas paralelas.
+
+\subsection{Limitações da computação clássica}
+Apesar dos avanços expressivos, a computação clássica enfrenta limitações fundamentais quando aplicada a determinados tipos de problemas. Em muitos casos, o número de estados possíveis cresce exponencialmente com o tamanho do problema, tornando inviável a exploração exaustiva de todas as soluções em tempo razoável.
+
+A teoria da complexidade computacional formaliza essas limitações por meio de classes como P, NP, NP-difícil e NP-completo \cite{sipser1996introduction}. Problemas pertencentes à classe P admitem soluções eficientes em tempo polinomial, enquanto problemas NP-completos, embora fáceis de verificar, não possuem algoritmos conhecidos que os resolvam eficientemente em computadores clássicos.
+
+Exemplos práticos incluem problemas de otimização combinatória, como o problema do caixeiro viajante, a fatoração de grandes números inteiros e certos problemas de simulação de sistemas físicos complexos. Na prática, mesmo com hardware moderno e técnicas avançadas de paralelismo, esses problemas rapidamente se tornam intratáveis à medida que sua dimensão aumenta.
+
+As limitações da computação clássica motivam a busca por novos paradigmas computacionais capazes de lidar de forma mais eficiente com problemas de alta complexidade. Em particular, há classes de problemas cuja estrutura sugere que abordagens baseadas exclusivamente em bits clássicos e operações determinísticas podem não ser suficientes.
+
+Nesse contexto, surgem modelos alternativos de computação, como a computação quântica, que exploram princípios físicos distintos para representar e processar informações. Esses modelos não substituem a computação clássica, mas oferecem novas ferramentas conceituais e práticas para enfrentar problemas que “pedem” um novo tipo de tratamento computacional, abrindo caminho para avanços em áreas como criptografia, otimização e simulação de sistemas complexos.
+
+
+\section{Limites da computação clássica e motivação para novos paradigmas}
+
+\subsection{Limitações tecnológicas versus limitações teóricas}
+Ao longo da história da computação, muitos obstáculos foram superados por meio de avanços tecnológicos, como o aumento da velocidade dos processadores, a miniaturização dos componentes eletrônicos e o aprimoramento das arquiteturas computacionais. Essas limitações, de natureza tecnológica, estão associadas a restrições práticas de engenharia e tendem a ser mitigadas com o progresso científico e industrial.
+
+Porém, nem todas as limitações enfrentadas pela computação clássica podem ser superadas por avanços tecnológicos, existem barreiras de natureza teórica, intrínsecas ao próprio modelo computacional clássico, baseado na manipulação de bits e em operações determinísticas ou probabilísticas.
+
+Essas limitações persistem mesmo quando se considera um computador idealizado, capaz de executar operações em tempo arbitrariamente pequeno e com memória ilimitada. Nesses casos, o fator limitante não é a velocidade de cada operação individual, mas o crescimento do número total de operações necessárias para resolver determinados problemas.
+
+Um exemplo paradigmático é o problema do logaritmo discreto \cite{shor1994algorithms}. Dado um grupo finito, um gerador \( g \) e um elemento \( h \), o objetivo é encontrar o expoente \( x \) tal que \( g^x = h \). Apesar de sua formulação simples, não existem algoritmos clássicos conhecidos que resolvam esse problema em tempo polinomial, mesmo considerando paralelismo clássico extremo. O melhor desempenho clássico conhecido ainda apresenta crescimento subexponencial, tornando o problema intratável para instâncias de grande porte. Assim, a dificuldade do logaritmo discreto ilustra um limite estrutural do modelo clássico de computação, e não apenas uma limitação tecnológica.
+
+\subsection{Crescimento exponencial do espaço de estados e exemplos computacionais}
+O crescimento exponencial do espaço de estados está no cerne de diversos problemas computacionais relevantes. Na teoria da complexidade, esse fenômeno aparece de forma clara em problemas pertencentes às classes NP-difícil e NP-completo \cite{sipser1996introduction}, nos quais o número de soluções candidatas cresce combinatorialmente com o tamanho do problema.
+
+O problema do caixeiro viajante (\textit{Traveling Salesman Problem} – TSP) é um exemplo clássico. Dado um conjunto de cidades e as distâncias entre elas, o objetivo é encontrar o caminho de menor custo que visite cada cidade exatamente uma vez. A versão de decisão do problema é NP-completa, e a versão de otimização é NP-difícil. Na prática, instâncias de grande porte são tratadas por meio de heurísticas e algoritmos aproximados, como algoritmos genéticos ou \textit{simulated annealing} \cite{kirkpatrick1983optimization}, que produzem boas soluções, mas sem garantia de otimalidade global.
+
+Outro exemplo de grande relevância é o problema da fatoração de números inteiros grandes, base de sistemas criptográficos como o RSA \cite{rivest1978method}. Embora não se saiba se esse problema é NP-completo, ele não admite algoritmos clássicos eficientes conhecidos. Nesse caso, a computação quântica oferece uma vantagem estrutural: o algoritmo de Shor \cite{shor1994algorithms} demonstra que a fatoração pode ser realizada em tempo polinomial em um computador quântico, evidenciando que o obstáculo não está apenas no hardware, mas no modelo computacional utilizado.
+
+Essas dificuldades tornam-se ainda mais pronunciadas na simulação de sistemas físicos quânticos. Um sistema composto por $n$ partículas quânticas requer a descrição de um estado em um espaço de dimensão proporcional a $2^n$. Como consequência, a simulação exata desses sistemas em computadores clássicos torna-se rapidamente inviável, mesmo para valores modestos de $n$, reforçando a ideia de que certos problemas apresentam uma incompatibilidade fundamental com o paradigma clássico de computação.
+
+\subsection{Computação não-clássica e a motivação física de Feynman}
+Diante dessas limitações estruturais, surgem propostas de paradigmas de computação não-clássica, que buscam explorar modelos físicos alternativos para representar e processar informação. A computação analógica utiliza grandezas contínuas e a dinâmica natural de sistemas físicos para realizar cálculos, enquanto a computação neuromórfica inspira-se na organização do cérebro, explorando paralelismo massivo e adaptação.
+
+Entre esses paradigmas, a computação quântica se destaca por sua fundamentação direta nas leis da mecânica quântica. Em vez de tentar simular sistemas quânticos por meio de bits clássicos, a computação quântica propõe utilizar sistemas quânticos controlados como elementos computacionais, explorando propriedades como superposição, interferência e emaranhamento.
+
+Essa ideia foi articulada de forma pioneira por Richard Feynman \cite{feynman2018simulating}, ao observar que a dificuldade de simular sistemas quânticos em computadores clássicos não é acidental, mas resulta do fato de que a natureza não opera segundo as regras da computação clássica. Assim, a computação quântica surge não apenas como uma alternativa tecnológica, mas como um novo paradigma conceitual, alinhado à própria estrutura física dos sistemas que se deseja estudar.
 
 % PARTE DO GUI
 \section{Fundamentos da computação quântica} 

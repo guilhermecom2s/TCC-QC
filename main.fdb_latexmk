@@ -1,23 +1,23 @@
 # Fdb version 4
-["bibtex main"] 1765416108.66501 "main.aux" "main.bbl" "main" 1765416111.18107 0
-  "./Postextual/references.bib" 1765414453 392 44712c4ca3d544e332f946da4c383475 ""
+["bibtex main"] 1766326382.32581 "main.aux" "main.bbl" "main" 1766326387.43308 0
+  "./Postextual/references.bib" 1766326171 2500 82840af20a74425024400ae3b7c8196e ""
   "C:/Users/Vick/AppData/Roaming/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Users/Vick/AppData/Roaming/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "Textual/introducao.aux" 1765416110 2712 e82d589567280a9777ffaf978924d53f "pdflatex"
-  "Textual/metodologia.aux" 1765416110 3542 dc40f7a87737cfd35db2f4ddf26643b8 "pdflatex"
-  "Textual/referencial.aux" 1765416110 3688 e3338950fc4439b550a6f6447910fa9c "pdflatex"
-  "main.aux" 1765416110 4075 8e3ea281095d6f2ef3ca2603503396c5 "pdflatex"
+  "Textual/introducao.aux" 1766326386 2714 9401f4bc0c88c0d1b23d3db12822b5fb "pdflatex"
+  "Textual/metodologia.aux" 1766326386 3546 8dcf1999fb732fba867f60b373489e9f "pdflatex"
+  "Textual/referencial.aux" 1766326386 6207 5cf04bca19b6b3080701093c2b77f5d5 "pdflatex"
+  "main.aux" 1766326386 10858 f733894c5d62b6a10daf0749fa1ca902 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1765415446.58923 "main.idx" "main.ind" "main" 1765416111.18038 0
-  "main.idx" 1765416109 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1766326371.75632 "main.idx" "main.ind" "main" 1766326387.4326 0
+  "main.idx" 1766326386 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1765416108.93497 "c:/Users/Vick/Documents/TCC/TCC-QC/main.tex" "main.pdf" "main" 1765416111.18326 0
+["pdflatex"] 1766326382.5745 "c:/Users/Vick/Documents/TCC/TCC-QC/main.tex" "main.pdf" "main" 1766326387.4346 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc" 1256929440 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc" 1256929440 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -139,8 +139,8 @@
   "C:/Program Files/MiKTeX/tex/latex/xcolor/svgnam.def" 1700127522 4705 ec4d2f4b7125d5a5145cc9aabae1d54b ""
   "C:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Program Files/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "C:/Users/Vick/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1765414551 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/Vick/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1765414484 24215229 46c249de496a84952e7513265c234d52 ""
+  "C:/Users/Vick/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1766322512 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/Vick/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1766323120 24215229 8b28647a2e7e3b9bc0b75e6fbbee468c ""
   "C:/Users/Vick/AppData/Roaming/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Users/Vick/AppData/Roaming/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "C:/Users/Vick/AppData/Roaming/MiKTeX/tex/generic/etexcmds/etexcmds.sty" 1576433638 7734 b98cbb34c81f667027c1e3ebdbfce34b ""
@@ -209,17 +209,17 @@
   "Figuras/Bloch_sphere.png" 1765414453 8320 98057f4580697fe1c8aec206af6718b8 ""
   "Figuras/IFSP.png" 1765414453 4383 b8eea633a360d654bd264ed9d34436b1 ""
   "Pretextual/capa.tex" 1765414453 1077 1fa5914f28c9c977169de0ce6250f9ec ""
-  "Textual/introducao.aux" 1765416110 2712 e82d589567280a9777ffaf978924d53f "pdflatex"
+  "Textual/introducao.aux" 1766326386 2714 9401f4bc0c88c0d1b23d3db12822b5fb "pdflatex"
   "Textual/introducao.tex" 1765414453 821 c1a820f94dbcd47b73e88e106793c556 ""
-  "Textual/metodologia.aux" 1765416110 3542 dc40f7a87737cfd35db2f4ddf26643b8 "pdflatex"
+  "Textual/metodologia.aux" 1766326386 3546 8dcf1999fb732fba867f60b373489e9f "pdflatex"
   "Textual/metodologia.tex" 1765414453 5107 fbfe07050739d8ea267d5f80411d292e ""
-  "Textual/referencial.aux" 1765416110 3688 e3338950fc4439b550a6f6447910fa9c "pdflatex"
-  "Textual/referencial.tex" 1765416105 3537 427759f1fdec5a7fb7d8cc8d4f79552e ""
+  "Textual/referencial.aux" 1766326386 6207 5cf04bca19b6b3080701093c2b77f5d5 "pdflatex"
+  "Textual/referencial.tex" 1766326371 15759 8a00733a1e1dd721d32f3e2d7a4c1f50 ""
   "c:/Users/Vick/Documents/TCC/TCC-QC/main.tex" 1765414453 9202 c58f047bf91142a02fe90abb6ba4ee2a ""
-  "main.aux" 1765416110 4075 8e3ea281095d6f2ef3ca2603503396c5 "pdflatex"
-  "main.bbl" 1765416108 410 58fc8c6a04832bc2530b8cd0a951c2fd "bibtex main"
-  "main.brf" 1765416110 692 b60ccfdc94a72e43d3a9f1cdeb3b0275 "pdflatex"
-  "main.ind" 1765415446 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.aux" 1766326386 10858 f733894c5d62b6a10daf0749fa1ca902 "pdflatex"
+  "main.bbl" 1766326382 2727 43e75fe91589fb06ff8583f7143a5227 "bibtex main"
+  "main.brf" 1766326386 1375 671185c336c792745eb6d11a9905bbcf "pdflatex"
+  "main.ind" 1766326371 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
   "main.tex" 1765414453 9202 c58f047bf91142a02fe90abb6ba4ee2a ""
   "packages.tex" 1765415445 4223 071d49901da5be3567205ead5ae6d2ab ""
   (generated)
