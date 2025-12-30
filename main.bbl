@@ -37,6 +37,11 @@
 {MOORE, G.~E. et al. \textbf{Cramming more components onto integrated
   circuits}. 1965.}
 
+\bibitem[Nielsen e Chuang 2010]{nielsen2010quantum}
+\abntrefinfo{Nielsen e Chuang}{NIELSEN; CHUANG}{2010}
+{NIELSEN, M.~A.; CHUANG, I.~L. \textbf{Quantum computation and quantum
+  information}. [S.l.]: Cambridge university press, 2010.}
+
 \bibitem[Rivest, Shamir e Adleman 1978]{rivest1978method}
 \abntrefinfo{Rivest, Shamir e Adleman}{RIVEST; SHAMIR; ADLEMAN}{1978}
 {RIVEST, R.~L.; SHAMIR, A.; ADLEMAN, L. A method for obtaining digital
@@ -55,9 +60,9 @@
 {SIPSER, M. Introduction to the theory of computation.
 \textbf{ACM Sigact News}, ACM New York, NY, USA, v.~27, n.~1, p. 27--29, 1996.}
 
-\bibitem[Sutor 2019]{sutor2019dancing}
-\abntrefinfo{Sutor}{SUTOR}{2019}
-{SUTOR, R. \textbf{Dancing with qubits}. [S.l.]: Packt Publishing Birmingham,
-  UK, 2019. v.~1.}
+\bibitem[Watrous 2018]{watrous2018theory}
+\abntrefinfo{Watrous}{WATROUS}{2018}
+{WATROUS, J. \textbf{The theory of quantum information}. [S.l.]: Cambridge
+  university press, 2018.}
 
 \end{thebibliography}

@@ -71,50 +71,197 @@ Entre esses paradigmas, a computação quântica se destaca por sua fundamentaç
 
 Essa ideia foi articulada de forma pioneira por Richard Feynman \cite{feynman2018simulating}, ao observar que a dificuldade de simular sistemas quânticos em computadores clássicos não é acidental, mas resulta do fato de que a natureza não opera segundo as regras da computação clássica. Assim, a computação quântica surge não apenas como uma alternativa tecnológica, mas como um novo paradigma conceitual, alinhado à própria estrutura física dos sistemas que se deseja estudar.
 
-% PARTE DO GUI
-\section{Fundamentos da computação quântica} 
+%%% 4.
+
+\section{Fundamentos de Mecânica Quântica para Computação}
+
+Este capítulo apresenta os conceitos essenciais da mecânica quântica necessários para a compreensão da computação quântica. O objetivo não é desenvolver a teoria completa da mecânica quântica, mas introduzir apenas os elementos matemáticos e conceituais que fundamentam o modelo computacional quântico, conforme apresentado em referências clássicas como \cite{nielsen2010quantum} e \cite{watrous2018theory}.
+
+\subsection{Espaços Vetoriais Complexos}
+
+A formulação matemática da mecânica quântica é baseada em espaços vetoriais complexos. Em computação quântica, os estados físicos de sistemas quânticos são representados por vetores em um espaço vetorial complexo de dimensão finita, usualmente um espaço de Hilbert.
+
+Um espaço vetorial complexo é definido sobre o corpo dos números complexos $\mathbb{C}$, permitindo combinações lineares do tipo
+\begin{equation}
+\alpha \ket{v} + \beta \ket{w}, \quad \alpha, \beta \in \mathbb{C}.
+\end{equation}
+
+Além disso, esse espaço é equipado com um produto interno, que permite definir normas, ângulos e projeções, elementos fundamentais para a interpretação probabilística da teoria quântica.
+
+\subsection{Estados Quânticos e Notação de Dirac}
+
+Estados quânticos puros são representados por vetores normalizados em um espaço de Hilbert complexo. A notação mais comum para representar esses vetores é a notação de Dirac, ou notação bra-ket.
+
+Um vetor de estado é denotado por um \emph{ket}, como $\ket{\psi}$, enquanto seu conjugado transposto é denotado por um \emph{bra}, $\bra{\psi}$. O produto interno entre dois estados é escrito como
+\begin{equation}
+\braket{\phi|\psi}.
+\end{equation}
+
+No contexto da computação quântica, o sistema mais básico é o \emph{qubit}, cujo estado geral pode ser escrito como
+\begin{equation}
+\ket{\psi} = \alpha \ket{0} + \beta \ket{1},
+\end{equation}
+onde $\alpha, \beta \in \mathbb{C}$ e satisfazem a condição de normalização
+\begin{equation}
+|\alpha|^2 + |\beta|^2 = 1.
+\end{equation}
+
+\subsection{Superposição}
+
+A superposição é uma das características centrais da mecânica quântica e não possui análogo direto na computação clássica. Enquanto um bit clássico assume apenas os valores 0 ou 1, um qubit pode estar em uma combinação linear desses dois estados.
+
+Essa propriedade permite que sistemas quânticos representem simultaneamente múltiplos estados clássicos, o que é fundamental para o paralelismo quântico explorado por algoritmos quânticos.
+
+É importante ressaltar que a superposição não implica que o sistema possui simultaneamente ambos os valores clássicos de forma observável, mas sim que seu estado físico é descrito por uma combinação coerente desses estados.
+
+\subsection{Probabilidade e Amplitudes}
+
+Diferentemente da computação clássica, na qual probabilidades são atribuídas diretamente aos estados, na mecânica quântica as probabilidades são obtidas a partir das amplitudes complexas associadas aos estados.
+
+Dado um estado
+\begin{equation}
+\ket{\psi} = \alpha \ket{0} + \beta \ket{1},
+\end{equation}
+a probabilidade de obter o resultado $\ket{0}$ em uma medição é $|\alpha|^2$, enquanto a probabilidade de obter $\ket{1}$ é $|\beta|^2$.
+
+As amplitudes complexas permitem fenômenos exclusivamente quânticos, como interferência construtiva e destrutiva, que desempenham papel central em algoritmos quânticos como o de Shor e o de Grover.
+
+\subsection{Medição e Colapso do Estado}
+
+A medição em mecânica quântica é um processo fundamentalmente probabilístico. Ao medir um sistema quântico, o estado do sistema colapsa para um dos estados da base associada ao observável medido.
+
+No caso de um qubit medido na base computacional $\{\ket{0}, \ket{1}\}$, o estado $\ket{\psi} = \alpha \ket{0} + \beta \ket{1}$ colapsa para $\ket{0}$ com probabilidade $|\alpha|^2$ ou para $\ket{1}$ com probabilidade $|\beta|^2$.
+
+Após a medição, a superposição é destruída, e medições subsequentes produzem o mesmo resultado com probabilidade unitária. Esse comportamento distingue claramente a evolução unitária dos sistemas quânticos do processo de medição.
+
+\subsection{Sistemas Compostos e Produto Tensorial}
+
+Para descrever sistemas quânticos compostos por múltiplos subsistemas, utiliza-se o produto tensorial de espaços vetoriais. Se dois sistemas possuem espaços de estados $\mathcal{H}_A$ e $\mathcal{H}_B$, o espaço de estados do sistema composto é dado por
+\begin{equation}
+\mathcal{H}_{AB} = \mathcal{H}_A \otimes \mathcal{H}_B.
+\end{equation}
+
+No caso de dois qubits, os estados base do sistema composto são
+\begin{equation}
+\{ \ket{00}, \ket{01}, \ket{10}, \ket{11} \}.
+\end{equation}
+
+O produto tensorial é essencial para representar correlações quânticas entre subsistemas e constitui a base matemática para o estudo do emaranhamento.
+
+\subsection{Emaranhamento Quântico}
+
+O emaranhamento é um fenômeno exclusivamente quântico no qual o estado de um sistema composto não pode ser escrito como o produto tensorial dos estados de seus subsistemas.
+
+Um exemplo clássico de estado emaranhado é o estado de Bell
+\begin{equation}
+\ket{\Phi^+} = \frac{1}{\sqrt{2}}(\ket{00} + \ket{11}).
+\end{equation}
+
+Nesse estado, nenhuma descrição individual dos subsistemas é suficiente para caracterizar o sistema completo. Medições realizadas em um subsistema afetam instantaneamente as probabilidades associadas ao outro, independentemente da distância entre eles.
+
+O emaranhamento é um recurso fundamental para a computação quântica, sendo explorado em protocolos como teleportação quântica, correção de erros quânticos e aceleração algorítmica.
+
+\subsection{Informação Clássica versus Informação Quântica}
+
+A diferença conceitual entre informação clássica e quântica vai além da representação dos dados. Na computação clássica, a informação é armazenada em bits que assumem valores bem definidos e podem ser copiados livremente.
+
+Na computação quântica, a informação é armazenada em estados quânticos, que não podem ser copiados arbitrariamente devido ao teorema da não clonagem. Além disso, a informação quântica está sujeita a restrições impostas pela medição e pelo colapso do estado.
+
+Essas diferenças impõem novos paradigmas computacionais, nos quais algoritmos devem ser cuidadosamente projetados para explorar superposição, interferência e emaranhamento sem destruir a informação relevante durante o processo computacional.
 
 
+% 5.
 
-\subsection{Qubits}
-% Aqui falaremos sobre qubits, a estrututa básica da computação quântica
+\section{Qubits e Informação Quântica}
 
-O bit quântico (\textit{quantum bit}), ou simplesmente qubit, é a unidade fundamental da computação quântica, assim como o bit é para a computação clássica. Comparar um bit clássico com um qubit ajuda a compreender sua natureza. Um bit clássico pode assumir apenas um de dois valores possíveis: $0$ ou $1$. Enquanto nada o modifique, ele permanecerá em um desses dois estados fixos \cite{sutor2019dancing}. 
+Esta seção tem como objetivo formalizar o conceito de qubit e introduzir os fundamentos da informação quântica. Embora conceitos como superposição e medição já tenham sido apresentados anteriormente, aqui eles são tratados de forma mais sistemática, estabelecendo a base conceitual necessária para o estudo de circuitos quânticos, algoritmos e canais quânticos.
 
-De maneira análoga, quando medimos um qubit, obtemos um de dois resultados possíveis: $\ket{0}$ ou $\ket{1}$ (a notação de \textit{bras} e \textit{kets} será abordada em capítulo posterior). A principal diferença é que, antes da medição, o qubit pode existir em um estado de superposição, descrito pela combinação linear:
-\[
-\ket{\psi} = \alpha\ket{0} + \beta\ket{1}, \quad \text{com } |\alpha|^2 + |\beta|^2 = 1,
-\]
-onde $\alpha$ e $\beta$ são amplitudes complexas associadas às probabilidades de o qubit ser encontrado em $\ket{0}$ ou $\ket{1}$, respectivamente \cite{sutor2019dancing}. 
+\subsection{Definição Formal de Qubit}
 
-A superposição é um princípio fundamental da mecânica quântica que estabelece que, antes da medição, um sistema pode existir simultaneamente em múltiplos estados possíveis. No ato da medição, ocorre o chamado \textit{colapso da função de onda}, fazendo o sistema assumir um dos estados definidos. No caso de um qubit, os dois estados possíveis formam uma base bidimensional, e a superposição pode ser visualizada geometricamente na Esfera de Bloch (Fig.~\ref{fig:esfera}), que representa todos os estados quânticos possíveis de um qubit.
+O bit quântico (\textit{quantum bit}), ou qubit, é a unidade fundamental de informação na computação quântica. Matematicamente, um qubit é definido como um vetor unitário pertencente a um espaço de Hilbert complexo bidimensional, usualmente denotado por $\mathbb{C}^2$.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.3\linewidth]{./Figuras/Bloch_sphere.png}
-    \caption{Representação de um qubit na Esfera de Bloch.}
-    \label{fig:esfera}
-\end{figure}
+Escolhendo a base computacional $\{\ket{0}, \ket{1}\}$, qualquer estado puro de um qubit pode ser escrito como
+\begin{equation}
+\ket{\psi} = \alpha \ket{0} + \beta \ket{1},
+\end{equation}
+onde $\alpha, \beta \in \mathbb{C}$ e satisfazem a condição de normalização
+\begin{equation}
+|\alpha|^2 + |\beta|^2 = 1.
+\end{equation}
 
-Um equívoco comum é atribuir à superposição, isoladamente, a origem do alto poder computacional dos computadores quânticos. Embora ela seja condição necessária, não é suficiente. A superposição permite o \textit{paralelismo quântico}, em que múltiplas combinações de estados podem ser processadas simultaneamente. No entanto, sem mecanismos de interferência controlada, as medições resultariam apenas em resultados aleatórios, não necessariamente úteis para resolver um problema. 
+Essa definição formal diferencia o qubit de um bit clássico. Enquanto o bit clássico assume um valor determinístico $0$ ou $1$, o qubit é descrito por amplitudes complexas, cuja interpretação física está associada às probabilidades de resultados de medições.
 
-É por meio da interferência entre amplitudes quânticas que os algoritmos quânticos exploram as propriedades da superposição para eliminar resultados incorretos e reforçar os corretos. Os algoritmos de Shor e de Grover exemplificam esse princípio: ambos utilizam a superposição e a interferência de forma controlada para atingir ganhos de desempenho significativos em relação aos métodos clássicos.
+\subsection{Representação Geométrica: Esfera de Bloch}
 
+A representação geométrica dos estados de um qubit é frequentemente feita por meio da Esfera de Bloch. Nessa representação, todo estado puro de um qubit corresponde a um ponto sobre a superfície de uma esfera unitária.
 
+Qualquer estado $\ket{\psi}$ pode ser parametrizado como
+\begin{equation}
+\ket{\psi} = \cos\left(\frac{\theta}{2}\right)\ket{0} + e^{i\phi}\sin\left(\frac{\theta}{2}\right)\ket{1},
+\end{equation}
+com $\theta \in [0,\pi]$ e $\phi \in [0,2\pi)$.
 
-\section{Conceitos complementares}
+Os polos da esfera correspondem aos estados da base computacional, com $\ket{0}$ no polo norte e $\ket{1}$ no polo sul. Estados em superposição correspondem a pontos intermediários, enquanto a fase relativa $\phi$ representa rotações em torno do eixo $z$.
 
-Essa seção se dedica a explicar conceitos que formam a base da computação quântica
+A Esfera de Bloch fornece uma visualização intuitiva para operações unitárias de um único qubit, que se manifestam como rotações da esfera.
 
+\subsection{Estados Puros e Estados Mistos}
 
-\section{Brakets}
+Estados quânticos podem ser classificados em estados puros e estados mistos. Estados puros são aqueles que podem ser descritos por um único vetor de estado $\ket{\psi}$, conforme apresentado anteriormente.
 
-Na computação quântica é extremamente comum o uso de vetores e matriz para a representação dos estados quânticos. De forma geral podemos ter vetores em forma de linha e em forma de coluna, vamos considerar o vetor $\textbf{v} = v_1, v_2, ..., v_n$
+Estados mistos surgem quando há incerteza clássica sobre qual estado puro descreve o sistema ou quando o sistema está correlacionado com um ambiente externo. Esses estados são descritos formalmente pelo operador densidade $\rho$, definido como
+\begin{equation}
+\rho = \sum_i p_i \ket{\psi_i}\bra{\psi_i},
+\end{equation}
+onde $\{p_i\}$ é uma distribuição de probabilidades clássica.
 
+Estados puros correspondem a operadores densidade do tipo $\rho = \ket{\psi}\bra{\psi}$, enquanto estados mistos satisfazem $\mathrm{Tr}(\rho^2) < 1$. A formulação por operadores densidade é essencial para a descrição de sistemas abertos, ruído e canais quânticos.
 
-%\begin{bmatrix}
-%    v_1 & v_2 & ... & v_nx
-%\end{bmatrix}
+\subsection{Medidas Projetivas}
+
+A medição em mecânica quântica é descrita formalmente por operadores de medição. No caso mais simples, consideram-se medidas projetivas, associadas a um conjunto de projetores ortogonais $\{P_i\}$ que satisfazem
+\begin{equation}
+P_i P_j = \delta_{ij} P_i, \quad \sum_i P_i = I.
+\end{equation}
+
+A probabilidade de obter o resultado associado ao projetor $P_i$, quando o sistema está no estado $\rho$, é dada pela regra de Born:
+\begin{equation}
+p(i) = \mathrm{Tr}(P_i \rho).
+\end{equation}
+
+Após a medição, o estado do sistema colapsa para
+\begin{equation}
+\rho' = \frac{P_i \rho P_i}{\mathrm{Tr}(P_i \rho)}.
+\end{equation}
+
+No contexto da computação quântica, a medição mais comum é realizada na base computacional, correspondendo aos projetores $\ket{0}\bra{0}$ e $\ket{1}\bra{1}$.
+
+\subsection{Comparação entre Bit Clássico e Qubit}
+
+A diferença entre um bit clássico e um qubit não se limita à possibilidade de superposição. Um bit clássico pode ser descrito completamente por uma variável binária ou, em contextos probabilísticos, por uma distribuição de probabilidades clássica.
+
+O qubit, por sua vez, é descrito por amplitudes complexas, o que permite fenômenos como interferência quântica. Além disso, estados quânticos não podem ser copiados arbitrariamente, conforme estabelecido pelo teorema da não clonagem, e a medição altera inevitavelmente o estado do sistema.
+
+Essas diferenças impõem restrições e, simultaneamente, oferecem novos recursos computacionais que não possuem análogos clássicos.
+
+\subsection{Introdução à Informação Quântica}
+
+A informação quântica estuda como a informação é representada, processada e transmitida quando codificada em sistemas quânticos. Diferentemente da informação clássica, ela está sujeita às leis da mecânica quântica, incluindo superposição, emaranhamento e colapso por medição.
+
+\subsubsection{Entropia Quântica}
+
+A entropia quântica, conhecida como entropia de von Neumann, generaliza a entropia de Shannon para estados quânticos. Ela é definida como
+\begin{equation}
+S(\rho) = -\mathrm{Tr}(\rho \log \rho).
+\end{equation}
+
+Para estados puros, a entropia é nula, refletindo a ausência de incerteza. Para estados mistos, a entropia é positiva e quantifica o grau de mistura ou incerteza do estado.
+
+\subsubsection{Canal Quântico}
+
+Um canal quântico descreve a evolução mais geral possível de um estado quântico, incluindo efeitos de ruído e interação com o ambiente. Formalmente, um canal quântico é uma aplicação linear completamente positiva e preservadora de traço, que mapeia operadores densidade em operadores densidade.
+
+Canais quânticos são fundamentais para o estudo de comunicação quântica, correção de erros e limitações físicas da computação quântica em sistemas reais.
 
 
 

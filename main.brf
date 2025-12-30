@@ -9,13 +9,13 @@
 \backcite {rivest1978method}{{5}{2.2.2}{subsection.2.2.2}}
 \backcite {shor1994algorithms}{{5}{2.2.2}{subsection.2.2.2}}
 \backcite {feynman2018simulating}{{6}{2.2.3}{subsection.2.2.3}}
-\backcite {sutor2019dancing}{{6}{2.3.1}{subsection.2.3.1}}
-\backcite {sutor2019dancing}{{7}{2.3.1}{subsection.2.3.1}}
-\backcite {cortes1995support}{{9}{3}{chapter.3}}
-\backcite {samoshyn_fraud_2019}{{9}{3}{chapter.3}}
-\backcite {pedregosa2011scikit}{{9}{3}{chapter.3}}
-\backcite {wright1921correlation, berk1977tolerance}{{9}{3}{chapter.3}}
-\backcite {wright1921correlation, berk1977tolerance}{{9}{3}{chapter.3}}
-\backcite {hotelling1933analysis, karhunen1947under, loeve1977elementary}{{9}{3}{chapter.3}}
-\backcite {hotelling1933analysis, karhunen1947under, loeve1977elementary}{{9}{3}{chapter.3}}
-\backcite {hotelling1933analysis, karhunen1947under, loeve1977elementary}{{9}{3}{chapter.3}}
+\backcite {nielsen2010quantum}{{6}{2.3}{section.2.3}}
+\backcite {watrous2018theory}{{6}{2.3}{section.2.3}}
+\backcite {cortes1995support}{{13}{3}{chapter.3}}
+\backcite {samoshyn_fraud_2019}{{13}{3}{chapter.3}}
+\backcite {pedregosa2011scikit}{{13}{3}{chapter.3}}
+\backcite {wright1921correlation, berk1977tolerance}{{13}{3}{chapter.3}}
+\backcite {wright1921correlation, berk1977tolerance}{{13}{3}{chapter.3}}
+\backcite {hotelling1933analysis, karhunen1947under, loeve1977elementary}{{13}{3}{chapter.3}}
+\backcite {hotelling1933analysis, karhunen1947under, loeve1977elementary}{{13}{3}{chapter.3}}
+\backcite {hotelling1933analysis, karhunen1947under, loeve1977elementary}{{13}{3}{chapter.3}}
