@@ -1300,6 +1300,16 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT ./Figuras/Quantum_Logic_Gates.png
+INPUT ./Figuras/Quantum_Logic_Gates.png
+INPUT ./Figuras/Quantum_Logic_Gates.png
+INPUT ./Figuras/Quantum_Logic_Gates.png
+INPUT ./Figuras/Quantum_Logic_Gates.png
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT ./Textual/metodologia.tex
 INPUT ./Textual/metodologia.tex
 INPUT ./Textual/metodologia.tex
@@ -1337,6 +1347,7 @@ INPUT Textual/metodologia.aux
 INPUT ./main.brf
 INPUT ./main.brf
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc

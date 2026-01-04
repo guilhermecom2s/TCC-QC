@@ -161,14 +161,6 @@ Nesse estado, nenhuma descrição individual dos subsistemas é suficiente para 
 
 O emaranhamento é um recurso fundamental para a computação quântica, sendo explorado em protocolos como teleportação quântica, correção de erros quânticos e aceleração algorítmica.
 
-\subsection{Informação Clássica versus Informação Quântica}
-
-A diferença conceitual entre informação clássica e quântica vai além da representação dos dados. Na computação clássica, a informação é armazenada em bits que assumem valores bem definidos e podem ser copiados livremente.
-
-Na computação quântica, a informação é armazenada em estados quânticos, que não podem ser copiados arbitrariamente devido ao teorema da não clonagem. Além disso, a informação quântica está sujeita a restrições impostas pela medição e pelo colapso do estado.
-
-Essas diferenças impõem novos paradigmas computacionais, nos quais algoritmos devem ser cuidadosamente projetados para explorar superposição, interferência e emaranhamento sem destruir a informação relevante durante o processo computacional.
-
 
 % 5.
 
@@ -244,9 +236,17 @@ O qubit, por sua vez, é descrito por amplitudes complexas, o que permite fenôm
 
 Essas diferenças impõem restrições e, simultaneamente, oferecem novos recursos computacionais que não possuem análogos clássicos.
 
-\subsection{Introdução à Informação Quântica}
+\subsection{Informação Clássica versus Informação Quântica}
 
-A informação quântica estuda como a informação é representada, processada e transmitida quando codificada em sistemas quânticos. Diferentemente da informação clássica, ela está sujeita às leis da mecânica quântica, incluindo superposição, emaranhamento e colapso por medição.
+A distinção entre informação clássica e informação quântica vai além da forma de representação dos dados, estando profundamente ligada às leis físicas que governam cada modelo computacional. Na computação clássica, a informação é codificada em bits que assumem valores bem definidos, $0$ ou $1$, e podem ser copiados, lidos e manipulados sem alterar seu conteúdo.
+
+Em contextos probabilísticos clássicos, a incerteza está associada apenas à falta de conhecimento do observador, sendo possível descrever completamente o sistema por meio de distribuições de probabilidade sobre estados determinísticos.
+
+Na computação quântica, por outro lado, a informação é armazenada em estados quânticos, descritos por vetores de estado ou operadores densidade. Esses estados podem existir em superposição e apresentar correlações não clássicas, como o emaranhamento. Diferentemente do caso clássico, a incerteza quântica é intrínseca ao sistema e não pode ser interpretada apenas como desconhecimento do observador.
+
+Além disso, a informação quântica está sujeita a restrições fundamentais. O teorema da não clonagem estabelece que não é possível copiar arbitrariamente um estado quântico desconhecido, e o processo de medição altera inevitavelmente o estado do sistema, causando o colapso da superposição.
+
+Essas características impõem novos paradigmas computacionais. Algoritmos quânticos devem ser cuidadosamente projetados para explorar propriedades como superposição, interferência e emaranhamento, ao mesmo tempo em que minimizam medições intermediárias que destruiriam a informação quântica relevante antes da obtenção do resultado final.
 
 \subsubsection{Entropia Quântica}
 
@@ -263,6 +263,358 @@ Um canal quântico descreve a evolução mais geral possível de um estado quân
 
 Canais quânticos são fundamentais para o estudo de comunicação quântica, correção de erros e limitações físicas da computação quântica em sistemas reais.
 
+% 6 -----------------------------
+
+\section{Portas Lógicas Quânticas e Circuitos Quânticos}
+
+Esta seção apresenta como a computação quântica é operacionalizada na prática por meio de portas lógicas quânticas e circuitos quânticos. Enquanto capítulos anteriores introduziram os fundamentos físicos e matemáticos dos estados quânticos, aqui o foco recai sobre os mecanismos que permitem manipular esses estados de forma controlada para realizar computação.
+
+\subsection{Portas Quânticas como Operadores Unitários}
+
+Na computação quântica, a manipulação da informação é realizada por meio de portas lógicas quânticas, que correspondem a operadores lineares unitários atuando sobre o espaço de estados do sistema. A evolução de um sistema quântico isolado é descrita por operadores unitários $U$ que satisfazem
+\begin{equation}
+U^\dagger U = U U^\dagger = I.
+\end{equation}
+
+A unitariedade garante a preservação da norma do vetor de estado, assegurando que as probabilidades associadas aos resultados de medição permaneçam normalizadas. Diferentemente das portas clássicas, que operam sobre valores discretos, portas quânticas transformam amplitudes complexas, permitindo interferência construtiva e destrutiva.
+
+Portas de múltiplos qubits são responsáveis por criar correlações quânticas entre subsistemas, incluindo o emaranhamento, e não possuem equivalente direto na computação clássica. De forma geral, todo operador linear que atua em um espaço vetorial de dimensão $n$ pode ser representado por uma matriz $n \times n$.
+
+Como o espaço de estados de um sistema composto por $n$ qubits possui dimensão $2^n$, as portas lógicas quânticas que atuam sobre esse sistema podem ser representadas, de forma genérica, por matrizes unitárias $2^n \times 2^n$. Esse crescimento exponencial da dimensão do espaço de estados é uma característica central da computação quântica e está diretamente relacionado ao seu potencial computacional.
+
+A figura \ref{fig:quantum_gates} contém a representação gráfic, além da representação matricial de algumas das portas lógicas quânticas mais comuns, que serão detalhadas nas subseções a seguir
+
+\subsection{Portas de Um Qubit}
+
+Portas de um qubit correspondem a operadores unitários $2 \times 2$ e podem ser interpretadas geometricamente como rotações da Esfera de Bloch.
+
+\subsubsection{Porta Pauli-X}
+
+A porta Pauli-X atua como o análogo quântico da porta NOT clássica, trocando os estados $\ket{0}$ e $\ket{1}$. Sua representação matricial é
+\begin{equation}
+X =
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}.
+\end{equation}
+
+Na Esfera de Bloch, essa porta corresponde a uma rotação de $\pi$ em torno do eixo $x$.
+
+\subsubsection{Porta Pauli-Y}
+
+A porta Pauli-Y combina uma inversão de estado com uma mudança de fase, sendo representada por
+\begin{equation}
+Y =
+\begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix}.
+\end{equation}
+
+Essa porta corresponde a uma rotação de $\pi$ em torno do eixo $y$ da Esfera de Bloch.
+
+\subsubsection{Porta Pauli-Z}
+
+A porta Pauli-Z não altera as probabilidades associadas aos estados da base computacional, mas modifica a fase relativa entre eles. Sua matriz é
+\begin{equation}
+Z =
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}.
+\end{equation}
+
+Geometricamente, essa operação corresponde a uma rotação de $\pi$ em torno do eixo $z$.
+
+\subsubsection{Porta de Hadamard}
+
+A porta de Hadamard desempenha um papel central na computação quântica, pois cria superposição a partir de estados da base computacional. Sua representação matricial é
+\begin{equation}
+H = \frac{1}{\sqrt{2}}
+\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix}.
+\end{equation}
+
+Aplicada ao estado $\ket{0}$, a porta Hadamard produz
+\begin{equation}
+H\ket{0} = \frac{1}{\sqrt{2}}(\ket{0} + \ket{1}),
+\end{equation}
+e aplicada a $\ket{1}$, resulta em
+\begin{equation}
+H\ket{1} = \frac{1}{\sqrt{2}}(\ket{0} - \ket{1}).
+\end{equation}
+
+Essa capacidade de gerar interferência controlada torna a porta Hadamard essencial em algoritmos quânticos.
+
+
+% TODO: Decidir se usaremos essa parte ou não
+
+% \subsubsection{Portas de Rotação}
+
+% Além das portas discretas, é comum utilizar portas de rotação contínuas em torno dos eixos da Esfera de Bloch, definidas como
+% \begin{equation}
+% R_n(\theta) = e^{-i \theta \sigma_n / 2},
+% \end{equation}
+% onde $\sigma_n \in \{X, Y, Z\}$.
+
+% Essas portas permitem ajustes finos das amplitudes e fases dos estados quânticos e são particularmente importantes na implementação física de circuitos quânticos e em algoritmos variacionais.
+
+\subsubsection{Portas de Fase (S e T)}
+
+As portas de fase modificam exclusivamente a fase relativa dos estados quânticos. A porta $S$ é definida por
+\begin{equation}
+S =
+\begin{pmatrix}
+1 & 0 \\
+0 & i
+\end{pmatrix},
+\end{equation}
+enquanto a porta $T$, também conhecida como porta $\pi/8$, é dada por
+\begin{equation}
+T =
+\begin{pmatrix}
+1 & 0 \\
+0 & e^{i\pi/4}
+\end{pmatrix}.
+\end{equation}
+
+Essas portas são essenciais para a universalidade da computação quântica, pois permitem a geração de rotações que não podem ser obtidas apenas com portas de Clifford.
+
+
+\subsection{Portas de Múltiplos Qubits}
+
+Portas de múltiplos qubits são responsáveis por criar correlações quânticas entre subsistemas, incluindo o emaranhamento, e não possuem equivalente direto na computação clássica.
+
+\subsubsection{Porta CNOT}
+
+A porta CNOT (Controlled-NOT) atua sobre dois qubits, um de controle e um alvo. O qubit alvo é invertido se, e somente se, o qubit de controle estiver no estado $\ket{1}$.
+
+Em notação matricial, a porta CNOT pode ser representada por uma matriz $4 \times 4$ que atua sobre a base $\{\ket{00}, \ket{01}, \ket{10}, \ket{11}\}$. Essa porta é fundamental para a criação de estados emaranhados e para a universalidade da computação quântica.
+
+\subsubsection{Porta CZ}
+
+A porta CZ (Controlled-Z) aplica uma mudança de fase ao estado $\ket{11}$, mantendo os demais estados inalterados. Embora seu efeito seja puramente de fase, a porta CZ também é capaz de gerar emaranhamento quando combinada com portas de um qubit.
+
+\subsubsection{Porta SWAP}
+
+A porta SWAP troca os estados de dois qubits. Embora não gere emaranhamento por si só, ela é importante para reorganizar qubits em arquiteturas físicas onde a conectividade é limitada.
+
+\subsubsection{Porta Toffoli}
+
+A porta Toffoli, ou CCNOT, é uma porta controlada por dois qubits que atua sobre um terceiro. Ela desempenha um papel central na computação reversível e estabelece uma ponte conceitual entre circuitos clássicos reversíveis e circuitos quânticos.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{./Figuras/Quantum_Logic_Gates.png}
+    \caption{Conjunto de portas lógicas quânticas comumente utilizadas, incluindo portas de um qubit e de múltiplos qubits, suas representações em circuitos e respectivas matrizes unitárias.}
+    \label{fig:quantum_gates}
+\end{figure}
+
+
+\subsection{Construção de Circuitos Quânticos}
+
+Circuitos quânticos são representações gráficas que descrevem a sequência de portas aplicadas a um conjunto de qubits. Cada linha representa um qubit, e o tempo evolui da esquerda para a direita.
+
+A computação quântica ocorre pela aplicação sequencial de operadores unitários, seguida por uma etapa de medição. Durante a execução do circuito, o sistema evolui de forma determinística segundo a mecânica quântica; a indeterminação surge apenas no momento da medição.
+
+\subsection{Universalidade da Computação Quântica}
+
+Um conjunto de portas quânticas é dito universal se qualquer operador unitário pode ser aproximado arbitrariamente bem por uma sequência finita dessas portas.
+
+Um exemplo de conjunto universal amplamente utilizado é composto por todas as portas de um qubit combinadas com a porta CNOT. Esse resultado é fundamental, pois garante que circuitos quânticos podem implementar qualquer computação quântica fisicamente realizável.
+
+\subsection{Circuitos Clássicos versus Circuitos Quânticos}
+
+Embora haja similaridade estrutural entre circuitos clássicos e quânticos, as diferenças conceituais são profundas. Circuitos clássicos operam sobre bits determinísticos e implementam funções booleanas irreversíveis.
+
+Circuitos quânticos, por sua vez, devem ser reversíveis e são descritos por operadores unitários. Além disso, estados intermediários não podem ser observados sem alterar o resultado da computação, o que exige um planejamento cuidadoso da estrutura do circuito.
+
+\subsection{Medição ao Final do Circuito}
+
+Em um circuito quântico típico, a medição é realizada apenas ao final do processo computacional. Essa estratégia permite que a superposição e a interferência atuem plenamente durante a execução do algoritmo.
+
+A medição projeta o estado final do sistema em estados da base computacional, produzindo uma saída clássica que pode ser interpretada como o resultado da computação quântica.
+
+
+% 7 -----------------------------
+\section{Modelos de Computação Quântica e Algoritmos}
+
+Esta seção tem como objetivo conectar os fundamentos teóricos da computação quântica ao seu poder computacional. Para isso, são apresentados os principais modelos formais de computação quântica, seguidos pela descrição detalhada dos algoritmos quânticos mais representativos, destacando como propriedades específicas da mecânica quântica são exploradas para obter vantagens em relação à computação clássica.
+
+\subsection{Modelo de Circuitos Quânticos}
+
+O modelo de circuitos quânticos é o paradigma mais utilizado para descrever computações quânticas, especialmente em contextos experimentais e de implementação prática. Nesse modelo, a computação é representada por um circuito composto por três elementos principais: preparação do estado inicial, aplicação de uma sequência de portas quânticas unitárias e medição final.
+
+Inicialmente, os qubits são preparados em um estado conhecido, tipicamente $\ket{0}^{\otimes n}$. Em seguida, portas quânticas são aplicadas de forma sequencial, promovendo a evolução unitária do sistema. Por fim, realiza-se a medição dos qubits, convertendo o estado quântico final em uma saída clássica.
+
+Esse modelo é particularmente adequado para descrever algoritmos quânticos, pois torna explícito o papel da superposição, da interferência e do emaranhamento durante o processo computacional.
+
+\subsection{Máquina de Turing Quântica}
+
+A Máquina de Turing Quântica é uma generalização do modelo clássico de Máquina de Turing, na qual as transições são descritas por operadores unitários. Embora esse modelo seja fundamental do ponto de vista teórico, ele é menos utilizado na prática do que o modelo de circuitos.
+
+Do ponto de vista computacional, ambos os modelos são equivalentes em termos de poder computacional. A importância da Máquina de Turing Quântica reside principalmente na formalização da classe de complexidade BQP (\textit{Bounded-Error Quantum Polynomial Time}), que caracteriza os problemas eficientemente resolvíveis por computadores quânticos.
+
+\subsection{Algoritmos Quânticos}
+
+Algoritmos quânticos exploram propriedades específicas da mecânica quântica para resolver determinados problemas de forma mais eficiente do que qualquer algoritmo clássico conhecido. Entre essas propriedades destacam-se a superposição, a interferência e o emaranhamento.
+
+\subsubsection{Algoritmo de Shor}
+
+O algoritmo de Shor é um dos resultados mais emblemáticos da computação quântica, pois demonstra que um computador quântico pode fatorar números inteiros em tempo polinomial, enquanto os melhores algoritmos clássicos conhecidos requerem tempo subexponencial.
+
+O problema da fatoração de inteiros pode ser reduzido ao problema da determinação do período de uma função. Dado um inteiro $N$ a ser fatorado e um inteiro $a$ coprimo com $N$, define-se a função
+\begin{equation}
+f(x) = a^x \bmod N.
+\end{equation}
+
+Essa função é periódica, e a determinação eficiente de seu período permite extrair fatores não triviais de $N$ com alta probabilidade.
+
+A principal contribuição do computador quântico no algoritmo de Shor é a determinação do período da função $f(x)$. Para isso, o algoritmo utiliza um registrador quântico preparado em superposição de todos os valores possíveis de $x$, explorando o paralelismo quântico para avaliar a função simultaneamente para múltiplas entradas.
+
+Em seguida, aplica-se a Transformada de Fourier Quântica (QFT), que explora interferência quântica para amplificar as amplitudes associadas aos estados que codificam informações sobre o período da função. A medição final fornece, com alta probabilidade, um valor a partir do qual o período pode ser inferido por métodos clássicos.
+
+O ganho computacional do algoritmo de Shor decorre diretamente da capacidade do computador quântico de:
+\begin{itemize}
+\item Representar exponencialmente muitos valores simultaneamente por meio da superposição;
+\item Manipular fases complexas de forma controlada;
+\item Explorar interferência para extrair informação global sobre a função.
+\end{itemize}
+
+\subsubsection{Algoritmo de Grover}
+
+O algoritmo de Grover aborda o problema da busca não estruturada. Dado um conjunto não ordenado de $N$ elementos, deseja-se encontrar um elemento que satisfaça uma determinada condição. Classicamente, esse problema requer, em média, $O(N)$ consultas.
+
+O algoritmo de Grover resolve esse problema em $O(\sqrt{N})$ iterações, oferecendo uma aceleração quadrática em relação à computação clássica.
+
+O algoritmo inicia preparando uma superposição uniforme de todos os estados possíveis:
+\begin{equation}
+\ket{\psi_0} = \frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} \ket{x}.
+\end{equation}
+
+Em seguida, aplica-se repetidamente o operador de Grover, composto por duas etapas: a aplicação de um oráculo quântico que inverte a fase do estado solução e a aplicação do operador de difusão, que realiza uma reflexão em torno da média das amplitudes.
+
+Cada iteração do operador de Grover aumenta a amplitude do estado solução e reduz as amplitudes dos estados não desejados. Após aproximadamente $\pi \sqrt{N}/4$ iterações, a probabilidade de medir o estado correto torna-se próxima de 1.
+
+O algoritmo de Grover explora de forma explícita a interferência quântica, utilizando inversões de fase e reflexões geométricas no espaço de estados para amplificar a solução desejada.
+
+\subsection{Noção de Vantagem Quântica}
+
+A vantagem quântica refere-se à capacidade de computadores quânticos resolverem determinados problemas de forma mais eficiente do que computadores clássicos. É importante destacar que essa vantagem não é universal, mas específica a certos problemas e algoritmos.
+
+Algoritmos como os de Shor e Grover demonstram que, para classes específicas de problemas, a computação quântica oferece ganhos assintóticos claros. No entanto, muitos problemas computacionais permanecem igualmente difíceis ou até mais complexos no modelo quântico.
+
+\subsection{Limitações Práticas dos Algoritmos Quânticos}
+
+Apesar do potencial teórico dos algoritmos quânticos, sua implementação prática enfrenta limitações significativas. Entre elas destacam-se o ruído, a decoerência e a necessidade de correção de erros quânticos.
+
+Além disso, algoritmos como o de Shor exigem um número elevado de qubits lógicos e circuitos profundos, o que ainda está além das capacidades dos dispositivos quânticos atuais. Essas limitações reforçam a distinção entre o potencial teórico da computação quântica e sua realização prática no estado atual da tecnologia.
+
+
+% 8 -----------------------
+\section{Implementações Práticas e Ferramentas}
+
+Esta seção tem como objetivo discutir como a computação quântica é acessada na prática, quais são as limitações dos dispositivos atuais e quais ferramentas são utilizadas para a implementação e execução de circuitos quânticos.
+
+\subsection{Computação Quântica em Nuvem}
+
+Diferentemente da computação clássica, computadores quânticos ainda não são amplamente acessíveis como dispositivos locais. Atualmente, o principal meio de acesso a hardware quântico real é por meio de plataformas de computação em nuvem, oferecidas por empresas e instituições de pesquisa.
+
+Nesse modelo, usuários podem submeter circuitos quânticos para execução em processadores quânticos remotos, utilizando interfaces de programação de alto nível. Essa abordagem permite que pesquisadores e estudantes experimentem algoritmos quânticos reais sem a necessidade de infraestrutura física própria, ao custo de lidar com limitações impostas pelo hardware disponível.
+
+\subsection{Simuladores Clássicos versus Hardware Quântico Real}
+
+Ferramentas de computação quântica geralmente oferecem dois ambientes distintos para execução de circuitos: simuladores clássicos e dispositivos quânticos reais.
+
+Simuladores clássicos reproduzem a evolução exata de estados quânticos ideais, sem ruído ou decoerência. Eles são extremamente úteis para validação de algoritmos, depuração de circuitos e análise conceitual. No entanto, o custo computacional de simular sistemas quânticos cresce exponencialmente com o número de qubits, tornando simulações exatas inviáveis para sistemas maiores.
+
+Por outro lado, hardware quântico real opera sob condições físicas imperfeitas, estando sujeito a ruído, erros de porta e decoerência. Embora limitado em escala e fidelidade, o uso de hardware real é essencial para avaliar o comportamento de algoritmos quânticos em cenários práticos e compreender os desafios da computação quântica contemporânea.
+
+\subsection{Introdução ao Qiskit}
+
+O Qiskit é um dos principais frameworks de software para computação quântica, amplamente utilizado tanto em contextos acadêmicos quanto industriais. Ele fornece uma interface de alto nível para a construção, simulação e execução de circuitos quânticos em hardware real ou simulado.
+
+\subsubsection{Construção de Circuitos Quânticos}
+
+No Qiskit, circuitos quânticos são construídos de forma programática, utilizando abstrações que refletem diretamente o modelo de circuitos quânticos apresentado anteriormente. Qubits e bits clássicos são alocados explicitamente, e portas quânticas são aplicadas de maneira sequencial.
+
+Essa abordagem facilita a tradução direta de diagramas de circuitos quânticos para código executável, mantendo uma correspondência clara entre teoria e implementação.
+
+\subsubsection{Execução de Circuitos}
+
+Após a construção do circuito, o Qiskit permite sua execução tanto em simuladores quanto em dispositivos quânticos reais. No caso de simuladores, o resultado corresponde à evolução ideal do circuito. No caso de hardware real, o circuito é submetido a um processador quântico remoto, respeitando restrições como conectividade entre qubits e profundidade máxima do circuito.
+
+A execução em hardware real geralmente envolve múltiplas repetições do circuito, chamadas de \textit{shots}, a fim de estimar distribuições de probabilidade a partir das medições.
+
+\subsubsection{Medições}
+
+As medições no Qiskit são explicitamente especificadas no circuito, refletindo o modelo teórico no qual a medição é realizada ao final da computação. O resultado da execução consiste em contagens associadas aos diferentes resultados possíveis, que podem ser interpretadas como estimativas empíricas das probabilidades de medição.
+
+Esse processo evidencia a natureza estatística da computação quântica, na qual resultados individuais são aleatórios, mas distribuições globais carregam a informação relevante.
+
+\subsection{Ruído e Mitigação de Erros}
+
+Dispositivos quânticos atuais operam no regime conhecido como NISQ (\textit{Noisy Intermediate-Scale Quantum}), caracterizado por um número limitado de qubits e pela presença significativa de ruído.
+
+Entre as principais fontes de erro estão a decoerência, erros de porta e erros de leitura. Esses efeitos distorcem o estado quântico durante a execução do circuito, reduzindo a fidelidade dos resultados obtidos.
+
+Como a correção completa de erros quânticos ainda não é viável em dispositivos atuais, estratégias de mitigação de erros são frequentemente empregadas. Essas técnicas não eliminam o ruído, mas buscam reduzir seu impacto nos resultados finais, permitindo extrair informações úteis mesmo em hardware imperfeito.
+
+A compreensão dessas limitações é essencial para a correta interpretação de experimentos quânticos e para a avaliação realista do desempenho de algoritmos quânticos na prática.
 
 
 
+% 9 -----------------------------
+% TODO: Nesse capítulo é interessante trazer trabalhos de exemplo que exploram os cenários descritos
+\section{Possíveis Áreas de Aplicação da Computação Quântica}
+
+Após a apresentação dos fundamentos teóricos, modelos computacionais e ferramentas práticas da computação quântica, esta seção tem como objetivo apresentar um panorama das principais áreas nas quais essa tecnologia tem sido investigada como potencialmente vantajosa. O intuito não é aprofundar cada aplicação, mas delinear caminhos possíveis e contextualizar a relevância da computação quântica em diferentes domínios científicos e tecnológicos.
+
+\subsection{Otimização Combinatória}
+
+Problemas de otimização combinatória estão presentes em diversas áreas, como logística, planejamento, alocação de recursos e redes de transporte. Esses problemas geralmente envolvem a busca por uma solução ótima em um espaço de soluções que cresce exponencialmente com o tamanho do problema.
+
+A computação quântica é investigada como uma possível alternativa para tratar esses problemas por meio de algoritmos quânticos e híbridos, que exploram superposição e interferência para navegar no espaço de soluções. Embora não exista, até o momento, uma aceleração quântica universal comprovada para todos os problemas de otimização, abordagens quânticas têm sido propostas como heurísticas promissoras, especialmente em arquiteturas NISQ.
+
+\subsection{Simulação de Sistemas Físicos}
+
+A simulação de sistemas físicos é uma das motivações originais da computação quântica. Muitos sistemas quânticos, como materiais fortemente correlacionados e sistemas de muitos corpos, são intratáveis para simulação exata em computadores clássicos devido ao crescimento exponencial do espaço de estados.
+
+Computadores quânticos, por operarem segundo as mesmas leis físicas que os sistemas a serem simulados, oferecem uma plataforma natural para esse tipo de tarefa. Simulações quânticas podem, em princípio, reproduzir a dinâmica de sistemas físicos complexos de forma mais eficiente do que métodos clássicos.
+
+\subsection{Química Quântica}
+
+A química quântica é uma área intimamente relacionada à simulação de sistemas físicos, com foco específico em estruturas moleculares, energias eletrônicas e reações químicas. O cálculo preciso de propriedades moleculares é fundamental para o desenvolvimento de novos materiais, fármacos e catalisadores.
+
+A computação quântica tem sido investigada como uma ferramenta para melhorar a precisão e a eficiência desses cálculos, especialmente em sistemas onde métodos clássicos exigem aproximações severas. Algoritmos quânticos podem, em princípio, calcular estados eletrônicos com maior fidelidade, embora limitações práticas ainda restrinjam aplicações em larga escala.
+
+\subsection{Machine Learning Quântico}
+
+O \textit{machine learning} quântico busca investigar como conceitos e algoritmos de aprendizado de máquina podem ser implementados ou acelerados utilizando computadores quânticos. Essa área explora tanto algoritmos quânticos inspirados em técnicas clássicas quanto modelos híbridos que combinam computação clássica e quântica.
+
+Até o momento, não há consenso sobre a existência de uma vantagem quântica generalizada para tarefas de aprendizado de máquina. No entanto, o estudo dessa interseção tem contribuído para o desenvolvimento de novos modelos computacionais e para uma melhor compreensão dos limites entre aprendizado clássico e quântico.
+
+\subsection{Modelagem de Sistemas Complexos}
+
+Sistemas complexos caracterizam-se por interações não triviais entre múltiplos componentes, frequentemente resultando em comportamentos emergentes difíceis de prever. A computação quântica tem sido considerada uma possível ferramenta para a modelagem e análise desses sistemas.
+
+\subsubsection{Redes}
+
+Redes complexas aparecem em contextos diversos, como redes sociais, sistemas de comunicação e redes biológicas. A análise dessas estruturas frequentemente envolve problemas de grande escala e alta complexidade computacional. Abordagens quânticas têm sido propostas para a análise estrutural e dinâmica de redes, explorando paralelismo quântico e novas representações de estados.
+
+\subsubsection{Difusão}
+
+Processos de difusão em redes, como propagação de informações, falhas ou contaminações, são exemplos clássicos de dinâmicas complexas. Modelar e simular esses processos pode se tornar computacionalmente custoso em redes grandes e dinâmicas. A computação quântica surge como uma possibilidade para acelerar simulações ou oferecer novas formas de representação desses fenômenos.
+
+\subsubsection{Epidemiologia}
+
+A epidemiologia é um caso particular de modelagem de difusão em sistemas complexos, no qual se busca compreender e prever a propagação de doenças em populações. Modelos epidemiológicos frequentemente envolvem grandes espaços de estados e múltiplos parâmetros, tornando a simulação e otimização computacionalmente desafiadoras.
+
+Nesse contexto, a computação quântica tem sido explorada como uma possível ferramenta para simulação de dinâmicas epidemiológicas, otimização de estratégias de intervenção e análise de cenários complexos, ainda que tais aplicações se encontrem, em grande parte, em estágio exploratório.
+
+% 10. --------------------
+% TODO: Definir primeiro a aplicação
